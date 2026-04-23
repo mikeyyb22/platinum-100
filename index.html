@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta & Title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Platinum 100%">
+    <meta name="description" content="A complete 100% checklist for Pokémon Platinum. Track every item, battle, and event.">
+    <meta name="author" content="Michael McGehee">
+    <title>Platinum 100% | Home</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="./styles/small.css">
+    <link rel="stylesheet" href="./styles/larger.css">
+    <!-- JS -->
+    <script defer src="./scripts/navigation.js"></script>
+    <!-- Open Graph Meta Properties -->
+    <meta property="og:title" content="Platinum 100%">
+    <meta property="og:description" content="A complete 100% checklist for the Pokémon Platinum video game.">
+    <meta property="og:url" content="https://mikeyyb22.github.io/wdd231/finalproject">
+    <meta property="og:image" content="https://mikeyyb22.github.io/wdd231/finalproject/images/favicon.ico">
+    <!-- Favicon -->
+    <link rel="icon" href="./images/favicon.ico">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="./images/favicon.ico" alt="Giratina - Platinum 100% logo" width="32">
+        <span>Platinum 100%</span>
+        <button id="ham-btn" class="hamburger" aria-label="navigation"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="#">Home</a></li>
+            <li><a href="./checklist.html">Checklist</a></li>
+            <li><a href="./feedback.html">Feedback</a></li>
+        </ul>
+    </nav>
+    <main>
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="hero-text">
+                <h1>Pokémon Platinum<br>100% Completion Guide</h1>
+                <p>Track every item, battle, Pokémon, and event in Pokémon Platinum. Never miss a thing on your road to true completion.</p>
+                <a href="./checklist.html" class="hero-btn">Explore Checklist</a>
+            </div>
+            <div class="hero-img">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10007.png" alt="Giratina Origin Forme">
+            </div>
+        </div>
+        <div class="index-layout">
+            <!-- Stats Bar -->
+            <div class="stats-bar">
+                <div class="stat">
+                    <p class="stat-label">Estimated Playtime</p>
+                    <p class="stat-value">80 - 100 hrs</p>
+                </div>
+                <div class="stat">
+                    <p class="stat-label">Locations</p>
+                    <p class="stat-value" id="location-count">—</p>
+                </div>
+                <div class="stat">
+                    <p class="stat-label">Difficulty</p>
+                    <p class="stat-value">Hard</p>
+                </div>
+            </div>
+
+            <!-- What is 100% Completion? -->
+            <section class="explainer">
+                <h2>What is 100% Completion?</h2>
+                <p>100% completion in Pokémon Platinum means collecting every item, defeating every trainer, catching every obtainable Pokémon, and completing every event — in order, from the very start of the game to the post-game. This checklist tracks all of it.</p>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="site-info">
+            <p class="site-name">Platinum 100%</p>
+            <p>A fan-made completion guide for Pokémon Platinum.</p>
+            <p>Not affiliated with Nintendo or Game Freak.</p>
+        </div>
+        <div class="page-info">
+            <p>Michael McGehee</p>
+            <p>&copy; <span id="currentyear"></span> | Platinum 100%</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>

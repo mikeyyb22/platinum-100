@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta & Title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Platinum 100% Feedback">
+    <meta name="description" content="Submit feedback, suggestions, or missing items for the Platinum 100% completion guide.">
+    <meta name="author" content="Michael McGehee">
+    <title>Platinum 100% | Feedback</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="./styles/small.css">
+    <link rel="stylesheet" href="./styles/larger.css">
+    <!-- JS -->
+    <script defer src="./scripts/navigation.js"></script>
+    <script defer src="./scripts/feedback.js"></script>
+    <!-- Open Graph Meta Properties -->
+    <meta property="og:title" content="Platinum 100% Feedback">
+    <meta property="og:description" content="Submit feedback for the Pokémon Platinum video game 100% completion guide.">
+    <meta property="og:url" content="https://mikeyyb22.github.io/wdd231/finalproject">
+    <meta property="og:image" content="https://mikeyyb22.github.io/wdd231/finalproject/images/favicon.ico">
+    <!-- Favicon -->
+    <link rel="icon" href="./images/favicon.ico">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="./images/favicon.ico" alt="Giratina - Platinum 100% logo" width="32">
+        <span>Platinum 100%</span>
+        <button id="ham-btn" class="hamburger" aria-label="navigation"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./checklist.html">Checklist</a></li>
+            <li class="current"><a href="#">Feedback</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Submit Feedback</h1>
+        <p class="feedback-intro">Found something missing? Have a suggestion? Let us know below.</p>
+
+        <form action="./thankyou.html" method="get">
+            <label>
+                Name <span class="req">*</span>
+                <input type="text" name="name" placeholder="Your name" required>
+            </label>
+            <label>
+                Email <span class="req">*</span>
+                <input type="email" name="email" placeholder="your@email.com" required>
+            </label>
+            <label>
+                Feedback Type <span class="req">*</span>
+                <select name="type" required>
+                    <option value="">-- Select a type --</option>
+                    <option value="missing-item">Missing Item</option>
+                    <option value="missing-pokemon">Missing Pokémon</option>
+                    <option value="missing-battle">Missing Battle</option>
+                    <option value="missing-event">Missing Event</option>
+                    <option value="correction">Correction</option>
+                    <option value="general">General Feedback</option>
+                </select>
+            </label>
+            <label>
+                Subject <span class="req">*</span>
+                <input type="text" name="subject" placeholder="Brief summary" required>
+            </label>
+            <label>
+                Feedback <span class="req">*</span>
+                <textarea name="feedback" rows="6" placeholder="Describe your feedback in detail..." required></textarea>
+            </label>
+            <label>
+                Screenshot <span class="optional">(optional)</span>
+                <input type="file" name="screenshot" accept="image/png, image/jpeg">
+            </label>
+            <button type="submit" id="feedback-submit">Submit Feedback</button>
+        </form>
+    </main>
+    <footer>
+        <div class="site-info">
+            <p class="site-name">Platinum 100%</p>
+            <p>A fan-made completion guide for Pokémon Platinum.</p>
+            <p>Not affiliated with Nintendo or Game Freak.</p>
+        </div>
+        <div class="page-info">
+            <p>Michael McGehee</p>
+            <p>&copy; <span id="currentyear"></span> | Platinum 100%</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>

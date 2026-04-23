@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta & Title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Platinum 100% Checklist">
+    <meta name="description" content="Full 100% completion checklist for Pokémon Platinum. Track every item, battle, Pokémon, and event.">
+    <meta name="author" content="Michael McGehee">
+    <title>Platinum 100% | Checklist</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="./styles/small.css">
+    <link rel="stylesheet" href="./styles/larger.css">
+    <!-- JS -->
+    <script defer src="./scripts/navigation.js"></script>
+    <script type="module" src="./scripts/checklist.js"></script>
+    <!-- Open Graph Meta Properties -->
+    <meta property="og:title" content="Platinum 100% Checklist">
+    <meta property="og:description" content="Full 100% completion checklist for the Pokémon Platinum video game.">
+    <meta property="og:url" content="https://mikeyyb22.github.io/wdd231/finalproject">
+    <meta property="og:image" content="https://mikeyyb22.github.io/wdd231/finalproject/images/favicon.ico">
+    <!-- Favicon -->
+    <link rel="icon" href="./images/favicon.ico">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="./images/favicon.ico" alt="Giratina - Platinum 100% logo" width="32">
+        <span>Platinum 100%</span>
+        <button id="ham-btn" class="hamburger" aria-label="navigation"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li class="current"><a href="#">Checklist</a></li>
+            <li><a href="./feedback.html">Feedback</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>100% Checklist</h1>
+
+        <!-- Progress Tracker -->
+        <div class="progress-tracker">
+            <div class="progress-info">
+                <span id="progress-count">0 / 0</span>
+                <span id="progress-percent">0%</span>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+        </div>
+
+        <!-- Phase Navigator -->
+        <div class="phase-navigator">
+            <button id="prev-phase" aria-label="previous phase">&#8592;</button>
+            <div>
+                <h2 id="phase-title">Phase</h2>
+                <p id="phase-progress"></p>
+            </div>   
+            <button id="next-phase" aria-label="next phase">&#8594;</button>
+        </div>
+
+        <!-- Type Filters -->
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="Item">Items</button>
+            <button class="filter-btn" data-filter="Pokemon">Pokémon</button>
+            <button class="filter-btn" data-filter="Battle">Battles</button>
+            <button class="filter-btn" data-filter="Event">Events</button>
+        </div>
+
+        <!-- Location Cards -->
+        <div id="location-cards"></div>
+
+        <!-- Modal -->
+        <dialog id="location-modal">
+            <div class="modal-header">
+                <h2 id="modal-title"></h2>
+                <button id="modal-close">&times;</button>
+            </div>
+            <div class="modal-progress">
+                <span id="modal-progress-count"></span>
+            </div>
+            <ul id="modal-items"></ul>
+        </dialog>
+    </main>
+    <footer>
+        <div class="site-info">
+            <p class="site-name">Platinum 100%</p>
+            <p>A fan-made completion guide for Pokémon Platinum.</p>
+            <p>Not affiliated with Nintendo or Game Freak.</p>
+        </div>
+        <div class="page-info">
+            <p>Michael McGehee</p>
+            <p>&copy; <span id="currentyear"></span> | Platinum 100%</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>

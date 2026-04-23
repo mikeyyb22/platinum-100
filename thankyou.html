@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta & Title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Platinum 100% Feedback">
+    <meta name="description" content="Thank you for your feedback on the Platinum 100% completion guide.">
+    <meta name="author" content="Michael McGehee">
+    <title>Platinum 100% | Thank You</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="./styles/small.css">
+    <link rel="stylesheet" href="./styles/larger.css">
+    <!-- JS -->
+    <script defer src="./scripts/navigation.js"></script>
+    <script defer src="./scripts/thankyou.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" href="./images/favicon.ico">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="./images/favicon.ico" alt="Giratina - Platinum 100% logo" width="32">
+        <span>Platinum 100%</span>
+        <button id="ham-btn" class="hamburger" aria-label="navigation"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./checklist.html">Checklist</a></li>
+            <li><a href="./feedback.html">Feedback</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Thank You!</h1>
+        <section id="results">
+            <p>Here's what you submitted:</p>
+            <ul id="submission-details"></ul>
+        </section>
+        <div class="thankyou-links">
+            <a href="./feedback.html" class="hero-btn">Submit More Feedback</a>
+            <a href="./checklist.html" class="hero-btn">Back to Checklist</a>
+        </div>
+    </main>
+    <footer>
+        <div class="site-info">
+            <p class="site-name">Platinum 100%</p>
+            <p>A fan-made completion guide for Pokémon Platinum.</p>
+            <p>Not affiliated with Nintendo or Game Freak.</p>
+        </div>
+        <div class="page-info">
+            <p>Michael McGehee</p>
+            <p>&copy; <span id="currentyear"></span> | Platinum 100%</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>
