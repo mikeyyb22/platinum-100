@@ -213,6 +213,20 @@ const platinumChecklist = {
           "type": "Battle",
           "location": "Trainer School",
           "sprite": "https://archives.bulbagarden.net/media/upload/e/e8/Spr_DP_School_Kid_F.png"
+        },
+        {
+          "name": "Backdrops",
+          "type": "Recurring Item",
+          "notes": "After receiving fashion case",
+          "location": "GTS 1st Floor",
+          "sprite": ""
+        },
+        {
+          "name": "Unlock Box Wallpapers",
+          "type": "Recurring Event",
+          "notes": "Tell Danny secret codes (https://www.pokewiki.de/Spezial:Geheimcode-Generator?uselang=en)",
+          "location": "3F Jubilife TV",
+          "sprite": ""
         }
       ],
       "Route 203": [
@@ -630,6 +644,13 @@ const platinumChecklist = {
           "type": "Item",
           "hidden": false,
           "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/cheri-berry.png"
+        },
+        {
+          "name": "Assorted Berries",
+          "type": "Recurring Item",
+          "notes": "Once per day",
+          "location": "Flower Shop",
+          "sprite": ""
         }
       ],
       "Floaroma Meadow South": [
@@ -1604,6 +1625,13 @@ const platinumChecklist = {
           "name": "Artist William",
           "type": "Battle",
           "sprite": "https://archives.bulbagarden.net/media/upload/4/45/Spr_DP_Artist.png"
+        },
+        {
+          "name": "Random Berry",
+          "type": "Recurring Item",
+          "notes": "Once per day",
+          "location": "Berry Master",
+          "sprite": ""
         }
       ],
       "Hearthome City": [
@@ -1716,6 +1744,11 @@ const platinumChecklist = {
           "type": "Item",
           "hidden": false,
           "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/amulet-coin.png"
+        },
+        {
+          "name": "Berry & Accessories man",
+          "type": "Recurring Item",
+          "sprite": ""
         }
       ],
       "Team Galactic Eterna Building": [
@@ -2316,6 +2349,18 @@ const platinumChecklist = {
           "name": "Day Care",
           "type": "Event",
           "sprite": ""
+        },
+        {
+          "name": "Different types of Poke Balls/Heart Scales",
+          "type": "Recurring Item",
+          "location": "Pokemon News Press",
+          "sprite": ""
+        },
+        {
+          "name": "Alphabet Seals",
+          "type": "Recurring Item",
+          "notes": "Must show different Unowns",
+          "sprite": ""
         }
       ],
       "Solaceon Ruins": [
@@ -2868,6 +2913,18 @@ const platinumChecklist = {
           "name": "Maylene",
           "type": "Gym Battle",
           "sprite": "https://archives.bulbagarden.net/media/upload/a/a6/Spr_DP_Maylene.png"
+        },
+        {
+          "name": "Massage Girl",
+          "type": "Recurring Event",
+          "notes": "Once per day, massage 1 Pokemon to increase friendship",
+          "sprite": ""
+        },
+        {
+          "name": "Hidden Power Man",
+          "type": "Recurring Event",
+          "location": "Prize Exchange",
+          "sprite": ""
         }
       ],
       "Veilstone Dept. Store": [
@@ -2891,6 +2948,84 @@ const platinumChecklist = {
           "notes": "5F",
           "hidden": false,
           "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sticky-barb.png"
+        },
+        {
+          "name": "TM83 [Natural Gift]",
+          "type": "Recurring Item",
+          "notes": "$2,000",
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+        },
+        {
+          "name": "TM17 [Protect]",
+          "type": "Recurring Item",
+          "notes": "$2,000",
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+        },
+        {
+          "name": "TM54 [False Swipe]",
+          "type": "Recurring Item",
+          "notes": "$2,000",
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+        },
+        {
+          "name": "TM20 [Safeguard]",
+          "type": "Recurring Item",
+          "notes": "$2,000",
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+        },
+        {
+          "name": "TM33 [Reflect]",
+          "type": "Recurring Item",
+          "notes": "$2,000",
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+        },
+        {
+          "name": "TM16 [Light Screen]",
+          "type": "Recurring Item",
+          "notes": "$2,000",
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+        },
+        {
+          "name": "TM70 [Flash]",
+          "type": "Recurring Item",
+          "notes": "$1,000",
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+        },
+        {
+          "name": "TM38 [Fire Blast]",
+          "type": "Recurring Item",
+          "notes": "$5,500",
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+        },
+        {
+          "name": "TM25 [Thunder]",
+          "type": "Recurring Item",
+          "notes": "$5,500",
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+        },
+        {
+          "name": "TM14 [Blizzard]",
+          "type": "Recurring Item",
+          "notes": "$5,500",
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+        },
+        {
+          "name": "TM22 [SolarBeam]",
+          "type": "Recurring Item",
+          "notes": "$3,000",
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+        },
+        {
+          "name": "TM52 [Focus Blast]",
+          "type": "Recurring Item",
+          "notes": "$5,500",
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+        },
+        {
+          "name": "TM15 [Hyper Beam]",
+          "type": "Recurring Item",
+          "notes": "$7,500",
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
         }
       ],
       "Veilstone Game Corner": [
@@ -2911,6 +3046,120 @@ const platinumChecklist = {
           "type": "Item",
           "notes": "10+ Bonus rounds in a row",
           "hidden": false,
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+        },
+        {
+          "name": "Silk Scarf",
+          "type": "Recurring Item",
+          "notes": "1000 Coins",
+          "sprite": ""
+        },
+        {
+          "name": "Wide Lens",
+          "type": "Recurring Item",
+          "notes": "1000 Coins",
+          "sprite": ""
+        },
+        {
+          "name": "Zoom Lens",
+          "type": "Recurring Item",
+          "notes": "1000 Coins",
+          "sprite": ""
+        },
+        {
+          "name": "Metronome",
+          "type": "Recurring Item",
+          "notes": "1000 Coins",
+          "sprite": ""
+        },
+        {
+          "name": "TM90 [Substitute]",
+          "type": "Recurring Item",
+          "notes": "2000 Coins",
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+        },
+        {
+          "name": "TM58 [Endure]",
+          "type": "Recurring Item",
+          "notes": "2000 Coins",
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+        },
+        {
+          "name": "TM75 [Swords Dance]",
+          "type": "Recurring Item",
+          "notes": "4000 Coins",
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+        },
+        {
+          "name": "TM32 [Double Team]",
+          "type": "Recurring Item",
+          "notes": "4000 Coins",
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+        },
+        {
+          "name": "TM44 [Rest]",
+          "type": "Recurring Item",
+          "notes": "6000 Coins",
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+        },
+        {
+          "name": "TM89 [U-turn]",
+          "type": "Recurring Item",
+          "notes": "6000 Coins",
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+        },
+        {
+          "name": "TM10 [Hidden Power]",
+          "type": "Recurring Item",
+          "notes": "6000 Coins",
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+        },
+        {
+          "name": "TM27 [Return]",
+          "type": "Recurring Item",
+          "notes": "8000 Coins",
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+        },
+        {
+          "name": "TM21 [Frustration]",
+          "type": "Recurring Item",
+          "notes": "8000 Coins",
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+        },
+        {
+          "name": "TM35 [Flamethrower]",
+          "type": "Recurring Item",
+          "notes": "10000 Coins",
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+        },
+        {
+          "name": "TM24 [Thunderbolt]",
+          "type": "Recurring Item",
+          "notes": "10000 Coins",
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+        },
+        {
+          "name": "TM13 [Ice Beam]",
+          "type": "Recurring Item",
+          "notes": "10000 Coins",
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+        },
+        {
+          "name": "TM29 [Psychic]",
+          "type": "Recurring Item",
+          "notes": "10000 Coins",
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+        },
+        {
+          "name": "TM74 [Gyro Ball]",
+          "type": "Recurring Item",
+          "notes": "15000 Coins",
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+        },
+        {
+          "name": "TM68 [Giga Impact]",
+          "type": "Recurring Item",
+          "notes": "20000 Coins",
           "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
         }
       ]
@@ -3280,6 +3529,12 @@ const platinumChecklist = {
           "name": "Beauty Cyndy",
           "type": "Battle",
           "sprite": "https://archives.bulbagarden.net/media/upload/7/73/Spr_DP_Beauty.png"
+        },
+        {
+          "name": "Footprint Ribbon",
+          "type": "Recurring Item",
+          "notes": "Show Mr. Footstep Pokemon w/Max Friendship",
+          "sprite": ""
         }
       ],
       "Pastoria City": [
@@ -3356,6 +3611,12 @@ const platinumChecklist = {
           "name": "Wake",
           "type": "Gym Battle",
           "sprite": "https://archives.bulbagarden.net/media/upload/0/06/Spr_Pt_Crasher_Wake.png"
+        },
+        {
+          "name": "Weakening Berry",
+          "type": "Recurring Item",
+          "notes": "1x per day",
+          "sprite": ""
         }
       ],
       "Great Marsh": [
@@ -3844,6 +4105,12 @@ const platinumChecklist = {
           "name": "Worker Conrad",
           "type": "Battle",
           "sprite": "https://archives.bulbagarden.net/media/upload/e/eb/Spr_DP_Worker.png"
+        },
+        {
+          "name": "Shards",
+          "type": "Recurring Item Trade",
+          "location": "Trade Star Piece to Mr. Fuego",
+          "sprite": ""
         }
       ],
       "Eterna City": [
@@ -4603,6 +4870,12 @@ const platinumChecklist = {
           "name": "Cyrus",
           "type": "Battle",
           "sprite": "https://archives.bulbagarden.net/media/upload/9/97/Spr_Pt_Cyrus.png"
+        },
+        {
+          "name": "Great Ball",
+          "type": "Recurring Item",
+          "notes": "If lead Pokemon has enough friendship",
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/great-ball.png"
         }
       ],
       "Canalave City": [
@@ -4863,6 +5136,34 @@ const platinumChecklist = {
           "name": "Galactic Grunts",
           "type": "Double Battle",
           "sprite": "https://archives.bulbagarden.net/media/upload/e/eb/Spr_DP_Worker.png"
+        },
+        {
+          "name": "Star Piece",
+          "type": "Recurring Item",
+          "notes": "B1F 2",
+          "location": "Right of 3 barrels NW of picnicker [Hidden]",
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/star-piece.png"
+        },
+        {
+          "name": "Star Piece",
+          "type": "Recurring Item",
+          "notes": "B2F 1",
+          "location": "E half of pit SW of Worker [Hidden]",
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/star-piece.png"
+        },
+        {
+          "name": "Star Piece",
+          "type": "Recurring Item",
+          "notes": "B2F 2",
+          "location": "S of Workers [Hidden]",
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/star-piece.png"
+        },
+        {
+          "name": "Star Piece",
+          "type": "Recurring Item",
+          "notes": "B2F 2",
+          "location": "Rock right of Ace Trainers [Hidden]",
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/star-piece.png"
         }
       ],
       "Route 218": [
@@ -6831,6 +7132,12 @@ const platinumChecklist = {
           "type": "Item",
           "hidden": false,
           "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+        },
+        {
+          "name": "Ribbons",
+          "type": "Recurring Item",
+          "notes": "1 for each day of the week",
+          "sprite": ""
         }
       ],
       "Victory Road": [
@@ -9742,314 +10049,6 @@ const platinumChecklist = {
     }
   },
   "recurring": {
-    "Recurring Item": {
-      "Jublife City": [
-        {
-          "name": "Backdrops",
-          "type": "Recurring Item",
-          "notes": "After receiving fashion case",
-          "location": "GTS 1st Floor",
-          "sprite": ""
-        }
-      ],
-      "Floaroma Town": [
-        {
-          "name": "Assorted Berries",
-          "type": "Recurring Item",
-          "notes": "Once per day",
-          "location": "Flower Shop",
-          "sprite": ""
-        }
-      ],
-      "Route 208": [
-        {
-          "name": "Random Berry",
-          "type": "Recurring Item",
-          "notes": "Once per day",
-          "location": "Berry Master",
-          "sprite": ""
-        }
-      ],
-      "Amity Square": [
-        {
-          "name": "Berry & Accessories man",
-          "type": "Recurring Item",
-          "sprite": ""
-        }
-      ],
-      "Solaceon Town": [
-        {
-          "name": "Different types of Poke Balls/Heart Scales",
-          "type": "Recurring Item",
-          "location": "Pokemon News Press",
-          "sprite": ""
-        },
-        {
-          "name": "Alphabet Seals",
-          "type": "Recurring Item",
-          "notes": "Must show different Unowns",
-          "sprite": ""
-        }
-      ],
-      "Veilstone Dept. Store": [
-        {
-          "name": "TM83 [Natural Gift]",
-          "type": "Recurring Item",
-          "notes": "$2,000",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
-        },
-        {
-          "name": "TM17 [Protect]",
-          "type": "Recurring Item",
-          "notes": "$2,000",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
-        },
-        {
-          "name": "TM54 [False Swipe]",
-          "type": "Recurring Item",
-          "notes": "$2,000",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
-        },
-        {
-          "name": "TM20 [Safeguard]",
-          "type": "Recurring Item",
-          "notes": "$2,000",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
-        },
-        {
-          "name": "TM33 [Reflect]",
-          "type": "Recurring Item",
-          "notes": "$2,000",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
-        },
-        {
-          "name": "TM16 [Light Screen]",
-          "type": "Recurring Item",
-          "notes": "$2,000",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
-        },
-        {
-          "name": "TM70 [Flash]",
-          "type": "Recurring Item",
-          "notes": "$1,000",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
-        },
-        {
-          "name": "TM38 [Fire Blast]",
-          "type": "Recurring Item",
-          "notes": "$5,500",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
-        },
-        {
-          "name": "TM25 [Thunder]",
-          "type": "Recurring Item",
-          "notes": "$5,500",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
-        },
-        {
-          "name": "TM14 [Blizzard]",
-          "type": "Recurring Item",
-          "notes": "$5,500",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
-        },
-        {
-          "name": "TM22 [SolarBeam]",
-          "type": "Recurring Item",
-          "notes": "$3,000",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
-        },
-        {
-          "name": "TM52 [Focus Blast]",
-          "type": "Recurring Item",
-          "notes": "$5,500",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
-        },
-        {
-          "name": "TM15 [Hyper Beam]",
-          "type": "Recurring Item",
-          "notes": "$7,500",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
-        }
-      ],
-      "Veilstone Game Corner": [
-        {
-          "name": "Silk Scarf",
-          "type": "Recurring Item",
-          "notes": "1000 Coins",
-          "sprite": ""
-        },
-        {
-          "name": "Wide Lens",
-          "type": "Recurring Item",
-          "notes": "1000 Coins",
-          "sprite": ""
-        },
-        {
-          "name": "Zoom Lens",
-          "type": "Recurring Item",
-          "notes": "1000 Coins",
-          "sprite": ""
-        },
-        {
-          "name": "Metronome",
-          "type": "Recurring Item",
-          "notes": "1000 Coins",
-          "sprite": ""
-        },
-        {
-          "name": "TM90 [Substitute]",
-          "type": "Recurring Item",
-          "notes": "2000 Coins",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
-        },
-        {
-          "name": "TM58 [Endure]",
-          "type": "Recurring Item",
-          "notes": "2000 Coins",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
-        },
-        {
-          "name": "TM75 [Swords Dance]",
-          "type": "Recurring Item",
-          "notes": "4000 Coins",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
-        },
-        {
-          "name": "TM32 [Double Team]",
-          "type": "Recurring Item",
-          "notes": "4000 Coins",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
-        },
-        {
-          "name": "TM44 [Rest]",
-          "type": "Recurring Item",
-          "notes": "6000 Coins",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
-        },
-        {
-          "name": "TM89 [U-turn]",
-          "type": "Recurring Item",
-          "notes": "6000 Coins",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
-        },
-        {
-          "name": "TM10 [Hidden Power]",
-          "type": "Recurring Item",
-          "notes": "6000 Coins",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
-        },
-        {
-          "name": "TM27 [Return]",
-          "type": "Recurring Item",
-          "notes": "8000 Coins",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
-        },
-        {
-          "name": "TM21 [Frustration]",
-          "type": "Recurring Item",
-          "notes": "8000 Coins",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
-        },
-        {
-          "name": "TM35 [Flamethrower]",
-          "type": "Recurring Item",
-          "notes": "10000 Coins",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
-        },
-        {
-          "name": "TM24 [Thunderbolt]",
-          "type": "Recurring Item",
-          "notes": "10000 Coins",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
-        },
-        {
-          "name": "TM13 [Ice Beam]",
-          "type": "Recurring Item",
-          "notes": "10000 Coins",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
-        },
-        {
-          "name": "TM29 [Psychic]",
-          "type": "Recurring Item",
-          "notes": "10000 Coins",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
-        },
-        {
-          "name": "TM74 [Gyro Ball]",
-          "type": "Recurring Item",
-          "notes": "15000 Coins",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
-        },
-        {
-          "name": "TM68 [Giga Impact]",
-          "type": "Recurring Item",
-          "notes": "20000 Coins",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
-        }
-      ],
-      "Route 213": [
-        {
-          "name": "Footprint Ribbon",
-          "type": "Recurring Item",
-          "notes": "Show Mr. Footstep Pokemon w/Max Friendship",
-          "sprite": ""
-        }
-      ],
-      "Pastoria City": [
-        {
-          "name": "Weakening Berry",
-          "type": "Recurring Item",
-          "notes": "1x per day",
-          "sprite": ""
-        }
-      ],
-      "Celestic Town": [
-        {
-          "name": "Great Ball",
-          "type": "Recurring Item",
-          "notes": "If lead Pokemon has enough friendship",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/great-ball.png"
-        }
-      ],
-      "Iron Island": [
-        {
-          "name": "Star Piece",
-          "type": "Recurring Item",
-          "notes": "B1F 2",
-          "location": "Right of 3 barrels NW of picnicker [Hidden]",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/star-piece.png"
-        },
-        {
-          "name": "Star Piece",
-          "type": "Recurring Item",
-          "notes": "B2F 1",
-          "location": "E half of pit SW of Worker [Hidden]",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/star-piece.png"
-        },
-        {
-          "name": "Star Piece",
-          "type": "Recurring Item",
-          "notes": "B2F 2",
-          "location": "S of Workers [Hidden]",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/star-piece.png"
-        },
-        {
-          "name": "Star Piece",
-          "type": "Recurring Item",
-          "notes": "B2F 2",
-          "location": "Rock right of Ace Trainers [Hidden]",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/star-piece.png"
-        }
-      ],
-      "Sunyshore City": [
-        {
-          "name": "Ribbons",
-          "type": "Recurring Item",
-          "notes": "1 for each day of the week",
-          "sprite": ""
-        }
-      ]
-    },
     "Recurring Battle": {
       "Jublife City": [
         {
@@ -10206,41 +10205,6 @@ const platinumChecklist = {
           "notes": "WSS",
           "location": "Pokemon Center",
           "sprite": "https://archives.bulbagarden.net/media/upload/1/1c/Spr_DP_Pok%C3%A9_Kid.png"
-        }
-      ]
-    },
-    "Recurring Event": {
-      "Jublife City": [
-        {
-          "name": "Unlock Box Wallpapers",
-          "type": "Recurring Event",
-          "notes": "Tell Danny secret codes (https://www.pokewiki.de/Spezial:Geheimcode-Generator?uselang=en)",
-          "location": "3F Jubilife TV",
-          "sprite": ""
-        }
-      ],
-      "Veilstone City": [
-        {
-          "name": "Massage Girl",
-          "type": "Recurring Event",
-          "notes": "Once per day, massage 1 Pokemon to increase friendship",
-          "sprite": ""
-        },
-        {
-          "name": "Hidden Power Man",
-          "type": "Recurring Event",
-          "location": "Prize Exchange",
-          "sprite": ""
-        }
-      ]
-    },
-    "Recurring Item Trade": {
-      "Fuego Ironworks": [
-        {
-          "name": "Shards",
-          "type": "Recurring Item Trade",
-          "location": "Trade Star Piece to Mr. Fuego",
-          "sprite": ""
         }
       ]
     },
