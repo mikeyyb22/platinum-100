@@ -25,6 +25,15 @@ const modalClose = document.querySelector('#modal-close');
 const filterBtns = document.querySelectorAll('.filter-btn');
 const phaseProgress = document.querySelector('#phase-progress');
 
+// ******** HELPERS ********
+function getBaseType(type) {
+    if (type.includes('Item')) return 'Item';
+    if (type.includes('Event')) return 'Event';
+    if (type.includes('Battle')) return 'Battle';
+    if (type.includes('Pokemon')) return 'Pokemon';
+    return type;
+}
+
 // ******** PROGRESS ********
 function updateProgress() {
     let totalItems = 0;
@@ -63,7 +72,7 @@ function renderLocationCards() {
 
         const filteredItems = activeFilter === 'all'
             ? items
-            : items.filter((item) => item.type === activeFilter);
+            : items.filter((item) => getBaseType(item.type) === activeFilter);
         
         if (filteredItems.length === 0) return;
 
@@ -123,7 +132,7 @@ function openModal(locationName, items) {
 
     const filteredItems = activeFilter === 'all'
         ? items
-        : items.filter((item) => item.type === activeFilter);
+        : items.filter((item) => getBaseType(item.type) === activeFilter);
     
     let locationTotal = filteredItems.length;
     let locationChecked = 0;
