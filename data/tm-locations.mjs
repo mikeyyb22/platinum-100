@@ -484,7 +484,7 @@ const tmLocations = [
         "name": "Wayward Cave",
         "method": "Found",
         "price": null,
-        "notes": "Hidden entrance under Cycling Road — requires Cut, Strength, and Bicycle",
+        "notes": "Hidden entrance under Cycling Road — requires Cut and Bicycle",
         "phase": "Forest"
       },
       {
