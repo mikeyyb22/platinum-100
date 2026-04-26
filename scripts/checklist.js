@@ -235,6 +235,12 @@ modalClose.addEventListener('click', () => {
     modal.close();
 });
 
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.close();
+    }
+})
+
 // ******** START ********
 renderLocationCards();
 updateProgress();
