@@ -120,6 +120,7 @@ const platinumChecklist = {
         {
           "name": "Youngster Tristan",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/8/48/Spr_DP_Youngster.png"
         },
         {
@@ -274,6 +275,7 @@ const platinumChecklist = {
         {
           "name": "Youngster Dallas",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/8/48/Spr_DP_Youngster.png"
         },
         {
@@ -289,6 +291,7 @@ const platinumChecklist = {
         {
           "name": "Lass Madeline",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/7/74/Spr_DP_Lass.png"
         }
       ],
@@ -469,6 +472,7 @@ const platinumChecklist = {
         {
           "name": "Lass Samantha",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/7/74/Spr_DP_Lass.png"
         }
       ],
@@ -601,6 +605,7 @@ const platinumChecklist = {
         {
           "name": "Bug Catcher Brandon",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/0/0b/Spr_DP_Bug_Catcher.png"
         },
         {
@@ -838,11 +843,13 @@ const platinumChecklist = {
         {
           "name": "Aroma Lady Elizabeth",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/6/6f/Spr_DP_Aroma_Lady.png"
         },
         {
           "name": "Camper Zackary",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/6/68/Spr_DP_Camper.png"
         },
         {
@@ -863,6 +870,7 @@ const platinumChecklist = {
         {
           "name": "Picnickers Karina",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/d/dd/Spr_DP_Picnicker.png"
         }
       ],
@@ -901,6 +909,7 @@ const platinumChecklist = {
         {
           "name": "Fisherman Joseph",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/c/c2/Spr_DP_Fisherman.png"
         },
         {
@@ -1132,6 +1141,7 @@ const platinumChecklist = {
         {
           "name": "Ninja Boy Zach",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/9/91/Spr_DP_Ninja_Boy.png"
         },
         {
@@ -1387,6 +1397,7 @@ const platinumChecklist = {
         {
           "name": "Cyclist John",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": ""
         },
         {
@@ -1402,12 +1413,14 @@ const platinumChecklist = {
         {
           "name": "Cyclist Kayla",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": ""
         },
         {
           "name": "Hiker Theodore",
           "type": "Battle",
           "location": "Underpath",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/7/76/Spr_DP_Hiker.png"
         }
       ],
@@ -1505,6 +1518,7 @@ const platinumChecklist = {
         {
           "name": "Battle Girl Helen",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/e/ef/Spr_DP_Battle_Girl.png"
         }
       ],
@@ -1624,6 +1638,7 @@ const platinumChecklist = {
         {
           "name": "Artist William",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/4/45/Spr_DP_Artist.png"
         },
         {
@@ -2173,6 +2188,7 @@ const platinumChecklist = {
         {
           "name": "Breeder Albert",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/f/fd/Spr_DP_Pok%C3%A9mon_Breeder_M.png"
         },
         {
@@ -2188,6 +2204,7 @@ const platinumChecklist = {
         {
           "name": "Poke Kid Danielle",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/1/1c/Spr_DP_Pok%C3%A9_Kid.png"
         },
         {
@@ -2198,6 +2215,7 @@ const platinumChecklist = {
         {
           "name": "Breeder Jennifer",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/6/62/Spr_DP_Pok%C3%A9mon_Breeder_F.png"
         },
         {
@@ -2656,6 +2674,7 @@ const platinumChecklist = {
         {
           "name": "Rancher Marco",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/6/61/Spr_DP_Rancher.png"
         },
         {
@@ -2666,6 +2685,7 @@ const platinumChecklist = {
         {
           "name": "Twins Teri & Tia",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/7/7e/Spr_DP_Twins.png"
         },
         {
@@ -2811,6 +2831,7 @@ const platinumChecklist = {
         {
           "name": "Jogger Craig",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/3/32/Spr_DP_Jogger.png"
         },
         {
@@ -2831,6 +2852,7 @@ const platinumChecklist = {
         {
           "name": "Ace Trainers Dennis & Maya",
           "type": "Double Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/b/b9/Spr_DP_Ace_Trainer_M_1.png"
         }
       ],
@@ -3307,11 +3329,13 @@ const platinumChecklist = {
         {
           "name": "Psychic Abigail",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/5/5d/Spr_DP_Psychic_F.png"
         },
         {
           "name": "PI Carlos",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/6/63/Spr_DP_PI.png"
         },
         {
@@ -3327,6 +3351,7 @@ const platinumChecklist = {
         {
           "name": "Psychic Mitchell",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/1/1f/Spr_DP_Psychic_M.png"
         },
         {
@@ -3376,6 +3401,51 @@ const platinumChecklist = {
           "notes": "After returning Suite Key",
           "hidden": false,
           "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/white-flute.png"
+        },
+        {
+          "name": "Artist Ismael & Beauty Harley",
+          "type": "Recurring Double Battle",
+          "sprite": "https://archives.bulbagarden.net/media/upload/4/45/Spr_DP_Artist.png"
+        },
+        {
+          "name": "Rich Boy Roman & Lady Kylie",
+          "type": "Recurring Double Battle",
+          "sprite": "https://archives.bulbagarden.net/media/upload/b/b1/Spr_DP_Rich_Boy.png"
+        },
+        {
+          "name": "Gentleman Leonardo & Socialite Rebecca",
+          "type": "Recurring Double Battle",
+          "sprite": "https://archives.bulbagarden.net/media/upload/8/89/Spr_DP_Socialite.png"
+        },
+        {
+          "name": "Collector Eugene & Aroma Lady Alison",
+          "type": "Recurring Double Battle",
+          "sprite": "https://archives.bulbagarden.net/media/upload/2/2a/Spr_DP_Collector.png"
+        },
+        {
+          "name": "School Kid Esteban & Pokefan Meredith",
+          "type": "Recurring Double Battle",
+          "sprite": "https://archives.bulbagarden.net/media/upload/a/a9/Spr_DP_School_Kid_M.png"
+        },
+        {
+          "name": "Veteran Emanuel & Lass Blythe",
+          "type": "Recurring Double Battle",
+          "sprite": "https://archives.bulbagarden.net/media/upload/7/74/Spr_DP_Lass.png"
+        },
+        {
+          "name": "Cameraman Darryl & Reporter Valerie",
+          "type": "Recurring Double Battle",
+          "sprite": "https://archives.bulbagarden.net/media/upload/c/c2/Spr_DP_Reporter.png"
+        },
+        {
+          "name": "PI Kendrick & Beauty Gabriella",
+          "type": "Recurring Double Battle",
+          "sprite": "https://archives.bulbagarden.net/media/upload/7/73/Spr_DP_Beauty.png"
+        },
+        {
+          "name": "Scientist Emilio & Breeder Kaylee",
+          "type": "Recurring Double Battle",
+          "sprite": "https://archives.bulbagarden.net/media/upload/f/fd/Spr_DP_Pok%C3%A9mon_Breeder_M.png"
         }
       ],
       "Route 213": [
@@ -3513,11 +3583,13 @@ const platinumChecklist = {
         {
           "name": "Tuber Chelsea",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/6/6e/Spr_DP_Tuber_F.png"
         },
         {
           "name": "Tuber Jared",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/7/75/Spr_DP_Tuber_M.png"
         },
         {
@@ -3528,6 +3600,7 @@ const platinumChecklist = {
         {
           "name": "Beauty Cyndy",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/7/73/Spr_DP_Beauty.png"
         },
         {
@@ -4330,6 +4403,7 @@ const platinumChecklist = {
         {
           "name": "Socialite Reina & Gentleman Jeremy",
           "type": "Double Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/8/89/Spr_DP_Socialite.png"
         },
         {
@@ -4340,6 +4414,7 @@ const platinumChecklist = {
         {
           "name": "Rich Boy Jason & Lady Melissa",
           "type": "Double Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/b/b1/Spr_DP_Rich_Boy.png"
         }
       ],
@@ -4480,8 +4555,9 @@ const platinumChecklist = {
           "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pinap-berry.png"
         },
         {
-          "name": "Rangers Jeffrey& Allison",
+          "name": "Rangers Jeffrey & Allison",
           "type": "Double Battle",
+          "notes": "VS Seeker",
           "sprite": ""
         },
         {
@@ -4492,6 +4568,7 @@ const platinumChecklist = {
         {
           "name": "Policeman Danny",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/0/0d/Spr_DP_Officer.png"
         },
         {
@@ -4517,16 +4594,19 @@ const platinumChecklist = {
         {
           "name": "Parasol Lady Alexa",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/7/7d/Spr_DP_Lady.png"
         },
         {
           "name": "Ranger Taylor",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": ""
         },
         {
           "name": "Scientist Shaun",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/f/f3/Spr_DP_Scientist.png"
         },
         {
@@ -4746,16 +4826,19 @@ const platinumChecklist = {
         {
           "name": "Bird Keeper Brianna",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/b/b4/Spr_DP_Bird_Keeper.png"
         },
         {
           "name": "Veteran Brian",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/a/af/Spr_DP_Veteran.png"
         },
         {
           "name": "Dragon Tamer Patrick",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/7/70/Spr_DP_Dragon_Tamer.png"
         }
       ],
@@ -4803,6 +4886,7 @@ const platinumChecklist = {
         {
           "name": "Ruin Maniac Harry",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/4/43/Spr_DP_Ruin_Maniac.png"
         },
         {
@@ -5219,6 +5303,7 @@ const platinumChecklist = {
         {
           "name": "Fisherman Miguel",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/c/c2/Spr_DP_Fisherman.png"
         },
         {
@@ -5234,6 +5319,7 @@ const platinumChecklist = {
         {
           "name": "Guitarist Tony",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/8/8c/Spr_DP_Guitarist.png"
         }
       ],
@@ -5366,16 +5452,19 @@ const platinumChecklist = {
         {
           "name": "Ace Trainer Shannon",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/8/83/Spr_DP_Ace_Trainer_F_1.png"
         },
         {
           "name": "Ace Trainer Jake",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/b/b9/Spr_DP_Ace_Trainer_M_1.png"
         },
         {
           "name": "Collector Ivan",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/2/2a/Spr_DP_Collector.png"
         }
       ],
@@ -5718,6 +5807,7 @@ const platinumChecklist = {
         {
           "name": "Skier Edward",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/7/75/Spr_DP_Skier_M.png"
         },
         {
@@ -5858,6 +5948,7 @@ const platinumChecklist = {
         {
           "name": "Ace Trainer Dalton",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/b/b9/Spr_DP_Ace_Trainer_M_1.png"
         },
         {
@@ -5873,6 +5964,7 @@ const platinumChecklist = {
         {
           "name": "Skier Madison",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/8/86/Spr_DP_Skier_F.png"
         },
         {
@@ -5883,6 +5975,7 @@ const platinumChecklist = {
         {
           "name": "Skier Bjorn",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/7/75/Spr_DP_Skier_M.png"
         },
         {
@@ -5898,6 +5991,7 @@ const platinumChecklist = {
         {
           "name": "Ace Trainer Olivia",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/8/83/Spr_DP_Ace_Trainer_F_1.png"
         }
       ],
@@ -6443,6 +6537,7 @@ const platinumChecklist = {
           "name": "Black Belt Philip",
           "type": "Battle",
           "location": "(Requires Rock Climb)",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/e/eb/Spr_DP_Black_Belt.png"
         },
         {
@@ -6461,6 +6556,7 @@ const platinumChecklist = {
           "name": "Skier Andrea",
           "type": "Battle",
           "location": "(Requires Rock Climb)",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/8/86/Spr_DP_Skier_F.png"
         }
       ],
@@ -7013,6 +7109,7 @@ const platinumChecklist = {
         {
           "name": "Rich Boy Trey",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/b/b1/Spr_DP_Rich_Boy.png"
         },
         {
@@ -7028,6 +7125,7 @@ const platinumChecklist = {
         {
           "name": "Sailor Marc",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/4/4e/Spr_DP_Sailor.png"
         },
         {
@@ -7043,6 +7141,7 @@ const platinumChecklist = {
         {
           "name": "Fisherman Alec",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/c/c2/Spr_DP_Fisherman.png"
         },
         {
@@ -7435,6 +7534,7 @@ const platinumChecklist = {
         {
           "name": "Swimmer Miranda",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/c/c5/Spr_DP_Swimmer_F.png"
         },
         {
@@ -7465,16 +7565,19 @@ const platinumChecklist = {
         {
           "name": "Swimmer Crystal",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/c/c5/Spr_DP_Swimmer_F.png"
         },
         {
           "name": "Swimmer Wesley",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/7/76/Spr_DP_Swimmer_M.png"
         },
         {
           "name": "Sailor Zachariah",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/4/4e/Spr_DP_Sailor.png"
         },
         {
@@ -7490,6 +7593,7 @@ const platinumChecklist = {
         {
           "name": "Swimmer Francisco",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/7/76/Spr_DP_Swimmer_M.png"
         },
         {
@@ -8622,16 +8726,19 @@ const platinumChecklist = {
         {
           "name": "Psychic Brittney",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/5/5d/Spr_DP_Psychic_F.png"
         },
         {
           "name": "Psychic Maxwell",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/1/1f/Spr_DP_Psychic_M.png"
         },
         {
           "name": "Veteran Armando",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/a/af/Spr_DP_Veteran.png"
         },
         {
@@ -8652,6 +8759,7 @@ const platinumChecklist = {
         {
           "name": "Dragon Tamer Hayden",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/7/70/Spr_DP_Dragon_Tamer.png"
         }
       ],
@@ -8901,11 +9009,13 @@ const platinumChecklist = {
         {
           "name": "Bird Keeper Audrey & Pokemon Ranger Ashlee",
           "type": "Double Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/4/42/Spr_DP_Pok%C3%A9mon_Ranger_M.png"
         },
         {
           "name": "Psychic Daisy",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/5/5d/Spr_DP_Psychic_F.png"
         },
         {
@@ -8916,6 +9026,7 @@ const platinumChecklist = {
         {
           "name": "Ace Trainer Rodolfo",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/b/b9/Spr_DP_Ace_Trainer_M_1.png"
         },
         {
@@ -8926,11 +9037,13 @@ const platinumChecklist = {
         {
           "name": "Ace Trainer Deanna",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/8/83/Spr_DP_Ace_Trainer_F_1.png"
         },
         {
           "name": "Dragon Tamer Geoffrey",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/7/70/Spr_DP_Dragon_Tamer.png"
         }
       ],
@@ -9108,6 +9221,7 @@ const platinumChecklist = {
         {
           "name": "Ace Trainer Saul",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/b/b9/Spr_DP_Ace_Trainer_M_1.png"
         },
         {
@@ -9471,11 +9585,13 @@ const platinumChecklist = {
         {
           "name": "Black Belt Davon",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/e/eb/Spr_DP_Black_Belt.png"
         },
         {
           "name": "Ace Trainer Moira",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/8/83/Spr_DP_Ace_Trainer_F_1.png"
         },
         {
@@ -9486,6 +9602,7 @@ const platinumChecklist = {
         {
           "name": "Pokemon Ranger Kyler",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/4/42/Spr_DP_Pok%C3%A9mon_Ranger_M.png"
         },
         {
@@ -9501,6 +9618,7 @@ const platinumChecklist = {
         {
           "name": "Psychic Corbin",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/1/1f/Spr_DP_Psychic_M.png"
         }
       ],
@@ -9669,6 +9787,7 @@ const platinumChecklist = {
         {
           "name": "Swimmer Glenn",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/7/76/Spr_DP_Swimmer_M.png"
         },
         {
@@ -9679,6 +9798,7 @@ const platinumChecklist = {
         {
           "name": "Swimmer Joanna",
           "type": "Battle",
+          "notes": "VS Seeker",
           "sprite": "https://archives.bulbagarden.net/media/upload/c/c5/Spr_DP_Swimmer_F.png"
         },
         {
@@ -10044,234 +10164,6 @@ const platinumChecklist = {
           "type": "Pokemon",
           "obtain": "Static",
           "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/491.png"
-        }
-      ]
-    }
-  },
-  "recurring": {
-    "Recurring Battle": {
-      "Jublife City": [
-        {
-          "name": "Reporter Kinsey",
-          "type": "Recurring Battle",
-          "notes": "MWF",
-          "location": "Pokemon Center",
-          "sprite": "https://archives.bulbagarden.net/media/upload/c/c2/Spr_DP_Reporter.png"
-        },
-        {
-          "name": "Cameraman Tevin",
-          "type": "Recurring Battle",
-          "notes": "MWF",
-          "location": "Pokemon Center",
-          "sprite": "https://archives.bulbagarden.net/media/upload/6/65/Spr_DP_Cameraman.png"
-        }
-      ],
-      "Oreburgh City": [
-        {
-          "name": "Idol Grace",
-          "type": "Recurring Battle",
-          "location": "Pokemon Center",
-          "sprite": "https://archives.bulbagarden.net/media/upload/c/cc/Spr_DP_Idol.png"
-        }
-      ],
-      "Floaroma Town": [
-        {
-          "name": "Poke Kid Ariel",
-          "type": "Recurring Battle",
-          "notes": "MTh",
-          "location": "Poke Center",
-          "sprite": "https://archives.bulbagarden.net/media/upload/1/1c/Spr_DP_Pok%C3%A9_Kid.png"
-        }
-      ],
-      "Hearthome City": [
-        {
-          "name": "Reporter Kinsey",
-          "type": "Recurring Battle",
-          "notes": "TF",
-          "location": "Pokemon Center",
-          "sprite": "https://archives.bulbagarden.net/media/upload/c/c2/Spr_DP_Reporter.png"
-        },
-        {
-          "name": "Cameraman Tevin",
-          "type": "Recurring Battle",
-          "notes": "TF",
-          "location": "Pokemon Center",
-          "sprite": "https://archives.bulbagarden.net/media/upload/6/65/Spr_DP_Cameraman.png"
-        },
-        {
-          "name": "Clown Lee",
-          "type": "Recurring Battle",
-          "notes": "SS",
-          "location": "Pokemon Center",
-          "sprite": ""
-        }
-      ],
-      "Solaceon Town": [
-        {
-          "name": "Poke Kid Ariel",
-          "type": "Recurring Battle",
-          "notes": "TF",
-          "location": "Pokemon Center",
-          "sprite": "https://archives.bulbagarden.net/media/upload/1/1c/Spr_DP_Pok%C3%A9_Kid.png"
-        }
-      ],
-      "Pastoria City": [
-        {
-          "name": "Guitarist Arturo",
-          "type": "Recurring Battle",
-          "notes": "WSS",
-          "location": "Pokemon Center",
-          "sprite": "https://archives.bulbagarden.net/media/upload/8/8c/Spr_DP_Guitarist.png"
-        },
-        {
-          "name": "Idol Grace",
-          "type": "Recurring Battle",
-          "notes": "MF",
-          "location": "Pokemon Center",
-          "sprite": "https://archives.bulbagarden.net/media/upload/c/cc/Spr_DP_Idol.png"
-        },
-        {
-          "name": "Clown Lee",
-          "type": "Recurring Battle",
-          "notes": "TThu",
-          "location": "Pokemon Center",
-          "sprite": ""
-        }
-      ],
-      "Pokemon Mansion": [
-        {
-          "name": "5 Maids / Liam / Celeste",
-          "type": "Recurring Battle",
-          "sprite": ""
-        }
-      ],
-      "Celestic Town": [
-        {
-          "name": "Clown Lee",
-          "type": "Recurring Battle",
-          "sprite": ""
-        }
-      ],
-      "Canalave City": [
-        {
-          "name": "Guitarist Arturo",
-          "type": "Recurring Battle",
-          "sprite": "https://archives.bulbagarden.net/media/upload/8/8c/Spr_DP_Guitarist.png"
-        }
-      ],
-      "Snowpoint City": [
-        {
-          "name": "Idol Grace",
-          "type": "Recurring Battle",
-          "notes": "SS",
-          "location": "Pokemon Center",
-          "sprite": "https://archives.bulbagarden.net/media/upload/c/cc/Spr_DP_Idol.png"
-        }
-      ],
-      "Fight Area": [
-        {
-          "name": "Reporter Kinsey",
-          "type": "Recurring Battle",
-          "notes": "SS",
-          "location": "Pokemon Center",
-          "sprite": "https://archives.bulbagarden.net/media/upload/c/c2/Spr_DP_Reporter.png"
-        },
-        {
-          "name": "Cameraman Tevin",
-          "type": "Recurring Battle",
-          "notes": "SS",
-          "location": "Pokemon Center",
-          "sprite": "https://archives.bulbagarden.net/media/upload/6/65/Spr_DP_Cameraman.png"
-        }
-      ],
-      "Survival Area": [
-        {
-          "name": "Gym Leaders/Stat Trainers",
-          "type": "Recurring Battle",
-          "notes": "Every day",
-          "sprite": ""
-        },
-        {
-          "name": "Barry",
-          "type": "Recurring Battle",
-          "notes": "SS",
-          "sprite": "https://archives.bulbagarden.net/media/upload/d/d5/Spr_Pt_Barry.png"
-        }
-      ],
-      "Resort Area": [
-        {
-          "name": "Poke Kid Ariel",
-          "type": "Recurring Battle",
-          "notes": "WSS",
-          "location": "Pokemon Center",
-          "sprite": "https://archives.bulbagarden.net/media/upload/1/1c/Spr_DP_Pok%C3%A9_Kid.png"
-        }
-      ]
-    },
-    "Recurring Double Battle": {
-      "Eterna City": [
-        {
-          "name": "Roxy & Oli",
-          "type": "Recurring Double Battle",
-          "notes": "MTSS",
-          "location": "Pokemon Center",
-          "sprite": ""
-        }
-      ],
-      "Veilstone City": [
-        {
-          "name": "Roxy & Oli",
-          "type": "Recurring Double Battle",
-          "notes": "WF",
-          "location": "Pokemon Center",
-          "sprite": ""
-        }
-      ],
-      "Valor Lakefront": [
-        {
-          "name": "Artist Ismael & Beauty Harley",
-          "type": "Recurring Double Battle",
-          "sprite": "https://archives.bulbagarden.net/media/upload/4/45/Spr_DP_Artist.png"
-        },
-        {
-          "name": "Rich Boy Roman & Lady Kylie",
-          "type": "Recurring Double Battle",
-          "sprite": "https://archives.bulbagarden.net/media/upload/b/b1/Spr_DP_Rich_Boy.png"
-        },
-        {
-          "name": "Gentleman Leonardo & Socialite Rebecca",
-          "type": "Recurring Double Battle",
-          "sprite": "https://archives.bulbagarden.net/media/upload/8/89/Spr_DP_Socialite.png"
-        },
-        {
-          "name": "Collector Eugene & Aroma Lady Alison",
-          "type": "Recurring Double Battle",
-          "sprite": "https://archives.bulbagarden.net/media/upload/2/2a/Spr_DP_Collector.png"
-        },
-        {
-          "name": "School Kid Esteban & Pokefan Meredith",
-          "type": "Recurring Double Battle",
-          "sprite": "https://archives.bulbagarden.net/media/upload/a/a9/Spr_DP_School_Kid_M.png"
-        },
-        {
-          "name": "Veteran Emanuel & Lass Blythe",
-          "type": "Recurring Double Battle",
-          "sprite": "https://archives.bulbagarden.net/media/upload/7/74/Spr_DP_Lass.png"
-        },
-        {
-          "name": "Cameraman Darryl & Reporter Valerie",
-          "type": "Recurring Double Battle",
-          "sprite": "https://archives.bulbagarden.net/media/upload/c/c2/Spr_DP_Reporter.png"
-        },
-        {
-          "name": "PI Kendrick & Beauty Gabriella",
-          "type": "Recurring Double Battle",
-          "sprite": "https://archives.bulbagarden.net/media/upload/7/73/Spr_DP_Beauty.png"
-        },
-        {
-          "name": "Scientist Emilio & Breeder Kaylee",
-          "type": "Recurring Double Battle",
-          "sprite": "https://archives.bulbagarden.net/media/upload/f/fd/Spr_DP_Pok%C3%A9mon_Breeder_M.png"
         }
       ]
     }
