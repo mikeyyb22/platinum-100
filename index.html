@@ -48,7 +48,7 @@
                 <a href="./checklist.html" class="hero-btn">Explore Checklist</a>
             </div>
             <div class="hero-img">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10007.png" alt="Giratina Origin Forme">
+                <img src="./images/giratina-hero.jpg" alt="Giratina Origin Forme">
             </div>
         </div>
         <div class="index-layout">
@@ -87,5 +87,19 @@
             <p id="lastModified"></p>
         </div>
     </footer>
+    <script type="module">
+        import platinumChecklist from './data/platinum-checklist.mjs';
+
+        const phases = platinumChecklist.phases;
+        const locations = new Set();
+
+        Object.keys(phases).forEach((phase) => {
+            Object.keys(phases[phase]).forEach((location) => {
+                locations.add(location);
+            });
+        });
+
+        document.querySelector('#location-count').textContent = locations.size;
+    </script>
 </body>
 </html>
