@@ -24,6 +24,17 @@ const modalProgress = document.querySelector('#modal-progress-count');
 const modalClose = document.querySelector('#modal-close');
 const filterBtns = document.querySelectorAll('.filter-btn');
 const phaseProgress = document.querySelector('#phase-progress');
+const breakdownToggle = document.querySelector('.breakdown-toggle');
+const breakdown = document.querySelector('#breakdown');
+const chevron = document.querySelector('.chevron');
+const breakdownPokemon = document.querySelector('#breakdown-pokemon');
+const breakdownItems = document.querySelector('#breakdown-items');
+const breakdownBattles = document.querySelector('#breakdown-battles');
+const breakdownOther = document.querySelector('#breakdown-other');
+const breakdownBarPokemon = document.querySelector('#breakdown-bar-pokemon');
+const breakdownBarItems = document.querySelector('#breakdown-bar-items');
+const breakdownBarBattles = document.querySelector('#breakdown-bar-battles');
+const breakdownBarOther = document.querySelector('#breakdown-bar-other');
 
 // ******** HELPERS ********
 function getBaseType(type) {
@@ -127,6 +138,43 @@ function updateProgress() {
     progressCount.textContent = `${checkedCount} / ${totalItems}`;
     progressPercent.textContent = `${percent}%`;
     progressBar.style.width = `${percent}%`;
+}
+
+// ******** BREAKDOWN ********
+function updateBreakdown() {
+    const types = {
+        Pokemon: { total: 0, checked: 0 },
+        Item: { total: 0, checked: 0 },
+        Battle: { total: 0, checked: 0 },
+        Other: { total: 0, checked: 0 }
+    };
+
+    phaseNames.forEach((phaseName) => {
+        const locations = phases[phaseName];
+        Object.keys(locations).forEach((locationName) => {
+            locations[locationName].forEach((item) => {
+                const itemKey = `${phaseName}-${locationName}-${item.name}`;
+                const baseType = getBaseType(item.type);
+                const category = types[baseType] ? baseType : 'Other';
+                types[category].total++;
+                if (checkedItems[itemKey]) types[category].checked++;
+            });
+        });
+    });
+
+    const sets = [
+        { key: 'Pokemon', count: breakdownPokemon, bar: breakdownBarPokemon },
+        { key: 'Item', count: breakdownItems, bar: breakdownBarItems },
+        { key: 'Battle', count: breakdownBattles, bar: breakdownBarBattles },
+        { key: 'Other', count: breakdownOther, bar: breakdownBarOther }
+    ];
+
+    sets.forEach(({ key, count, bar }) => {
+        const { total, checked } = types[key];
+        const percent = total === 0 ? 0 : Math.round((checked / total) * 100);
+        count.textContent = `${checked} / ${total}`;
+        bar.style.width = `${percent}%`;
+    });
 }
 
 // ******** LOCATION CARDS ********
@@ -282,6 +330,7 @@ function checkItem(itemKey, locationName, items) {
     updateProgress();
     openModal(locationName, items);
     renderLocationCards();
+    updateBreakdown();
 }
 
 // ******** PHASE NAVIGATOR ********
@@ -329,6 +378,13 @@ modal.addEventListener('click', (e) => {
     }
 })
 
+// ******** BREAKDOWN TOGGLE ********
+breakdownToggle.addEventListener('click', () => {
+    breakdown.classList.toggle('show');
+    chevron.classList.toggle('open');
+});
+
 // ******** START ********
 renderLocationCards();
 updateProgress();
+updateBreakdown();

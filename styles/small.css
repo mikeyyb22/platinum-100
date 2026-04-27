@@ -213,7 +213,7 @@ header span {
 /* ******** PROGRESS TRACKER ******** */
 .progress-tracker {
     margin: 15px 10px;
-    padding: 15px;
+    padding: 15px 15px 5px 15px;
     background-color: var(--bg-card);
     border: solid 1px var(--border-color);
     border-radius: 5px;
@@ -250,6 +250,86 @@ header span {
     border-radius: 5px;
     transition: width 0.4s ease-in-out;
 }
+
+/* ******** BREAKDOWN ******** */
+.breakdown-toggle {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    cursor: pointer;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    user-select: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.breakdown-toggle:hover {
+    color: var(--accent-gold);
+}
+
+.chevron {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease-in-out;
+    display: inline-block;
+    padding-bottom: 10.3px;
+}
+
+.chevron.open {
+    transform: rotate(180deg);
+}
+
+.breakdown {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: solid 1px var(--border-color);
+}
+
+.breakdown.show {
+    display: flex;
+}
+
+.breakdown-row {
+    display: grid;
+    grid-template-columns: 80px 55px 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.breakdown-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.breakdown-count {
+    font-size: 0.85rem;
+    color: var(--accent-gold);
+    font-weight: 700;
+    text-align: right;
+}
+
+.breakdown-bar-container {
+    height: 8px;
+    background-color: var(--border-color);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.breakdown-bar {
+    height: 100%;
+    width: 0%;
+    border-radius: 5px;
+    transition: width 0.4s ease-in-out;
+}
+
+.pokemon-bar { background-color: #4A90D9; }
+.items-bar { background-color: var(--accent-gold); }
+.battles-bar { background-color: var(--accent-red); }
+.other-bar { background-color: #7B4FA6; } 
 
 /* ******** PHASE NAVIGATOR ******** */
 .phase-navigator {
