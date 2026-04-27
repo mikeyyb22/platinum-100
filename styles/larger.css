@@ -100,6 +100,13 @@
         max-width: 600px;
     }
 
+    /* ******** PLANNING PAGE ******** */
+    .search-bar {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 0 40px;
+    }
+
     /* ******** FOOTER ******** */
     footer {
         flex-direction: row;

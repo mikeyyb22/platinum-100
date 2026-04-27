@@ -675,6 +675,36 @@ dialog::backdrop {
     flex-wrap: wrap;
 }
 
+/* ********PLANNING PAGE******** */
+
+/* ******** SEARCH BAR ******** */
+.search-bar {
+    margin: 15px 10px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px 15px; 
+    background-color: var(--bg-card);
+    border: solid 1px var(--border-color);
+    border-radius: 5px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 0 2px rgba(201, 168, 76, 0.15);
+}
+
+.search-bar input::placeholder {
+    color: var(--text-secondary);
+}
+
+
+
 /* ******** FOOTER ******** */
 footer {
     background-color: var(--bg-secondary);

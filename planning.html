@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta & Title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Platinum 100%">
+    <meta name="description" content="A complete 100% checklist for Pokémon Platinum. Track every item, battle, and event.">
+    <meta name="author" content="Michael McGehee">
+    <title>Platinum 100% | Planner</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="./styles/small.css">
+    <link rel="stylesheet" href="./styles/larger.css">
+    <!-- JS -->
+    <script defer src="./scripts/navigation.js"></script>
+    <script type="module" src="./scripts/planning.js"></script>
+    <!-- Open Graph Meta Properties -->
+    <meta property="og:title" content="Platinum 100% PKMN Planner">
+    <meta property="og:description" content="Plan your Pokémon movesets for your Platinum 100% playthrough.">
+    <meta property="og:url" content="https://mikeyyb22.github.io/wdd231/finalproject">
+    <meta property="og:image" content="https://mikeyyb22.github.io/wdd231/finalproject/images/favicon.ico">
+    <!-- Favicon -->
+    <link rel="icon" href="./images/favicon.ico">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="./images/favicon.ico" alt="Giratina - Platinum 100% logo" width="32">
+        <span>Platinum 100%</span>
+        <button id="ham-btn" class="hamburger" aria-label="navigation"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="./checklist.html">Checklist</a></li>
+            <li class="current"><a href="./planning.html">Planning</a></li>
+            <li><a href="./feedback.html">Feedback</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Pokemon Planner - Movesets</h1>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" id="pokemon-search" placeholder="Search Pokemon...">
+        </div>
+
+        <!-- Pokemon Selection -->
+        <section class="planner-section">
+            <h2>Pokémon</h2>
+            <div id="pokemon-cards"></div>
+        </section>
+
+        <!-- Planning Modal -->
+        <dialog id="planning-modal">
+            <div class="modal-header">
+                <div class="modal-pokemon-info">
+                    <img id="modal-pokemon-sprite" src="" alt="">
+                    <h2 id="modal-pokemon-name"></h2>
+                </div>
+                <button id="planning-modal-close">&#00D7</button>
+            </div>
+            <div class="modal-moves">
+                <div class="selected-moves">
+                    <h3>Selected Moves <span id="move-count">(0/4)</span></h3>
+                    <ul id="selected-moves-list"></ul>
+                </div>
+                <div class="available-moves">
+                    <div class="moves-filter-bar">
+                        <button class="move-filter-btn active" data-move-filter="all">All</button>
+                        <button class="move-filter-btn active" data-move-filter="level-up">Level Up</button>
+                        <button class="move-filter-btn active" data-move-filter="machine">TM/HM</button>
+                        <button class="move-filter-btn active" data-move-filter="tutor">Tutor</button>
+                        <button class="move-filter-btn active" data-move-filter="egg">Egg</button>
+                        <label class="egg-toggle">
+                            <input type="checkbox" id="egg-moves-toggle">
+                            Show Egg Moves
+                        </label>
+                    </div>
+                    <ul id="available-moves-list"></ul>
+                </div>
+            </div>
+        </dialog>
+    </main>
+    <footer>
+        <div class="site-info">
+            <p class="site-name">Platinum 100%</p>
+            <p>A fan-made completion guide for Pokémon Platinum.</p>
+            <p>Not affiliated with Nintendo or Game Freak.</p>
+        </div>
+        <div class="page-info">
+            <p>Michael McGehee</p>
+            <p>&copy; <span id="currentyear"></span> | Platinum 100%</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
