@@ -273,7 +273,7 @@ header span {
     font-size: 1.1rem;
     transition: transform 0.3s ease-in-out;
     display: inline-block;
-    padding-bottom: 10.3px;
+    padding-bottom: 12.3px;
 }
 
 .chevron.open {
