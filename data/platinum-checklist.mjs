@@ -26,10 +26,10 @@ const platinumChecklist = {
       ],
       "Route 201": [
         {
-          "name": "Chimchar",
+          "name": "Starter",
           "type": "Pokemon",
           "location": "Prof. Rowan",
-          "obtain": "Grass",
+          "obtain": "Gift",
           "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/390.png"
         },
         {
@@ -1654,7 +1654,7 @@ const platinumChecklist = {
           "name": "Eevee",
           "type": "Pokemon",
           "location": "Gift from Bebe",
-          "obtain": "Grass",
+          "obtain": "Gift",
           "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/133.png"
         },
         {

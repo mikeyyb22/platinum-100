@@ -467,6 +467,134 @@ dialog::backdrop {
     border: solid 1px var(--border-color);
 }
 
+/* ******** OBTAIN BADGES ******** */
+.obtain-badge {
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.obtain-grass { 
+    background-color: #2D6E2D; 
+    color: #FFF 
+}
+
+.obtain-surfing {
+    background-color: #1A6AAA;
+    color: #FFF;
+}
+
+.obtain-old-rod {
+    background-color: #5BA3C9;
+    color: #FFF;
+}
+
+.obtain-super-rod {
+    background-color: #2E7FAD;
+    color: #FFF;
+}
+
+.obtain-honey {
+    background-color: #C9A84C;
+    color: #FFF;
+}
+
+.obtain-gift {
+    background-color: #7B4FA6;
+    color: #FFF;
+}
+
+.obtain-static {
+    background-color: var(--accent-gold);
+    color: #FFF;
+}
+
+.obtain-radar {
+    background-color: #C97A2E;
+    color: #FFF;
+}
+
+.obtain-swarm {
+    background-color: #8B1A1A;
+    color: #FFF;
+}
+
+.obtain-dual-slot {
+    color: #FFF;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* ******** CARTRIDGE ICON ******** */
+.cartridge-icon {
+    display: inline-block;
+    position: relative;
+    width: 10px;
+    height: 12px;
+    border-radius: 1px 1px 2px 2px;
+    background-color: currentColor;
+    opacity: 0.9;
+}
+
+.cartridge-icon::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 2px;
+    background-color: var(--bg-primary);
+    border-radius: 1px;
+}
+
+.cartridge-icon::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 2px;
+    background-color: currentColor;
+    border-radius: 0 0 1px 1px;
+}
+
+/* ******** HIDDEN ITEM BADGE / DROPDOWN ******** */
+.hidden-badge {
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: 700;
+    background-color: var(--accent-red);
+    color: #FFF;
+    cursor: pointer;
+    user-select: none;
+}
+
+.hidden-location {
+    display: none;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    padding: 5px 8px;
+    margin-top: 5px;
+    background-color: var(--bg-primary);
+    border-left: 2px solid var(--accent-red);
+    border-radius: 0 3px 3px 0;
+    width: 100%;
+}
+
+.hidden-location.show {
+    display: block;
+}
+
+.modal-item {
+    flex-wrap: wrap;
+}
+
 /* ******** FOOTER ******** */
 footer {
     background-color: var(--bg-secondary);

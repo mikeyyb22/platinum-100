@@ -34,6 +34,76 @@ function getBaseType(type) {
     return type;
 }
 
+function getObtainBadge(item) {
+    if (item.type !== 'Pokemon' && !item.hidden) return null;
+
+    const obtain = item.obtain || '';
+    const span = document.createElement('span');
+    span.classList.add('obtain-badge');
+
+    if (item.hidden) {
+        span.classList.add('hidden-badge');
+        span.textContent = 'Hidden - Click here for location';
+        return span;
+    }
+
+    if (obtain === 'Grass') {
+        span.classList.add('obtain-grass');
+        span.textContent = 'Grass';
+    } else if (obtain === 'Surfing') {
+        span.classList.add('obtain-surfing');
+        span.textContent = 'Surf';
+    } else if (obtain === 'Fishing - Old Rod') {
+        span.classList.add('obtain-old-rod');
+        span.textContent = 'Old Rod';
+    } else if (obtain === 'Fishing - Good Rod') {
+        span.classList.add('obtain-good-rod');
+        span.textContent = 'Good Rod';
+    } else if (obtain === 'Fishing - Super Rod') {
+        span.classList.add('obtain-super-rod');
+        span.textContent = 'Super Rod';
+    } else if (obtain === 'Honey Tree') {
+        span.classList.add('obtain-honey');
+        span.textContent = 'Honey Tree';
+    } else if (obtain === 'Gift') {
+        span.classList.add('obtain-gift');
+        span.textContent = 'Gift';
+    } else if (obtain === 'Static') {
+        span.classList.add('obtain-static');
+        span.textContent = 'Static';
+    } else if (obtain === 'Poke Radar') {
+        span.classList.add('obtain-radar');
+        span.textContent = 'Poké Radar';
+    } else if (obtain === 'Swarm') {
+        span.classList.add('obtain-swarm');
+        span.textContent = 'Swarm';
+    } else if (obtain === 'Dual-slot [FireRed]' || 'Dual-slot [LeafGreen]' || 'Dual-slot [Ruby]' || 'Dual-slot [Sapphire]' || 'Dual-slot [Emerald]' || 'Dual-slot [Any Gen III]') {
+        span.classList.add('obtain-dual-slot');
+        
+        const cartridgeColors = {
+            'Dual-slot [FireRed]': '#CC0000',
+            'Dual-slot [LeafGreen]': '#2D6E2D',
+            'Dual-slot [Ruby]': '#9B1C1C',
+            'Dual-slot [Sapphire]': '#1C3A9B',
+            'Dual-slot [Emerald]': '#1C7A3A',
+            'Dual-slot [Any Gen III]': '#555555'
+        };
+
+        const color = cartridgeColors[obtain] || '#555555';
+        span.style.backgroundColor = color;
+
+        const icon = document.createElement('span');
+        icon.classList.add('cartridge-icon');
+        icon.style.color = color;
+
+        const gameName = obtain.replace('Dual-slot ', '').replace('[', '').replace(']', '');
+        span.appendChild(icon);
+        span.append(` Dual-slot: ${gameName}`);
+    } 
+
+    return span;
+}
+
 // ******** PROGRESS ********
 function updateProgress() {
     let totalItems = 0;
@@ -171,6 +241,24 @@ function openModal(locationName, items) {
         li.appendChild(img);
         li.appendChild(nameSpan);
         li.appendChild(typeSpan);
+
+        const badge = getObtainBadge(item);
+        if (badge) {
+            li.appendChild(badge);
+
+            if (item.hidden && item.location) {
+                const locationDiv = document.createElement('div');
+                locationDiv.classList.add('hidden-location');
+                locationDiv.textContent = `📍 ${item.location}`;
+
+                badge.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    locationDiv.classList.toggle('show');
+                });
+
+                li.appendChild(locationDiv);
+            }
+        }
 
         li.addEventListener('click', () => {
             checkItem(itemKey, locationName, items);
