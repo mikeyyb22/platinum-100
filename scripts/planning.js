@@ -77,12 +77,12 @@ function renderPokemonCards(pokemonList) {
         const card = document.createElement('div');
         const img = document.createElement('img');
         const info = document.createElement('div');
-        const name = document.createElement('p');
+        const nameEl = document.createElement('p');
         const movesDiv = document.createElement('div');
 
         card.classList.add('planner-card');
         info.classList.add('planner-card-info');
-        name.classList.add('planner-card-name');
+        nameEl.classList.add('planner-card-name');
         movesDiv.classList.add('planner-card-moves');
 
         img.src = './images/poke-ball-icon.svg';
@@ -90,7 +90,7 @@ function renderPokemonCards(pokemonList) {
         imageObserver.observe(img);
         img.alt = pokemon.name;
         
-        name.textcontent = pokemon.name;
+        nameEl.textContent = pokemon.name;
 
         // Show up to 4 move slots
         for (let i = 0; i < 4; i++) {
@@ -105,7 +105,7 @@ function renderPokemonCards(pokemonList) {
             movesDiv.appendChild(moveSpan);
         }
 
-        info.appendChild(name);
+        info.appendChild(nameEl);
         info.appendChild(movesDiv);
         card.appendChild(img);
         card.appendChild(info);

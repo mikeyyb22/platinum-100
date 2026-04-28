@@ -2087,7 +2087,7 @@ const platinumChecklist = {
           "type": "Pokemon",
           "location": "Night only",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/355.png"
         },
         {
           "name": "Spiritomb",
@@ -2387,182 +2387,182 @@ const platinumChecklist = {
           "type": "Pokemon",
           "location": "2nd big room",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/201-f.png"
         },
         {
           "name": "Unown R",
           "type": "Pokemon",
           "location": "3rd big room",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/201-r.png"
         },
         {
           "name": "Unown I",
           "type": "Pokemon",
           "location": "4th big room",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/201-i.png"
         },
         {
           "name": "Unown E",
           "type": "Pokemon",
           "location": "5th big room",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/201-e.png"
         },
         {
           "name": "Unown N",
           "type": "Pokemon",
           "location": "6th big room",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/201-n.png"
         },
         {
           "name": "Unown D",
           "type": "Pokemon",
           "location": "7th big room",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/201-d.png"
         },
         {
           "name": "Unown A",
           "type": "Pokemon",
           "location": "Dead-end room",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/201.png"
         },
         {
           "name": "Unown B",
           "type": "Pokemon",
           "location": "Dead-end room",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/201-b.png"
         },
         {
           "name": "Unown C",
           "type": "Pokemon",
           "location": "Dead-end room",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/201-c.png"
         },
         {
           "name": "Unown G",
           "type": "Pokemon",
           "location": "Dead-end room",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/201-g.png"
         },
         {
           "name": "Unown H",
           "type": "Pokemon",
           "location": "Dead-end room",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/201-h.png"
         },
         {
           "name": "Unown J",
           "type": "Pokemon",
           "location": "Dead-end room",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/201-j.png"
         },
         {
           "name": "Unown K",
           "type": "Pokemon",
           "location": "Dead-end room",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/201-k.png"
         },
         {
           "name": "Unown L",
           "type": "Pokemon",
           "location": "Dead-end room",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/201-l.png"
         },
         {
           "name": "Unown M",
           "type": "Pokemon",
           "location": "Dead-end room",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/201-m.png"
         },
         {
           "name": "Unown O",
           "type": "Pokemon",
           "location": "Dead-end room",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/201-o.png"
         },
         {
           "name": "Unown P",
           "type": "Pokemon",
           "location": "Dead-end room",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/201-p.png"
         },
         {
           "name": "Unown Q",
           "type": "Pokemon",
           "location": "Dead-end room",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/201-q.png"
         },
         {
           "name": "Unown S",
           "type": "Pokemon",
           "location": "Dead-end room",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/201-s.png"
         },
         {
           "name": "Unown T",
           "type": "Pokemon",
           "location": "Dead-end room",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/201-t.png"
         },
         {
           "name": "Unown U",
           "type": "Pokemon",
           "location": "Dead-end room",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/201-u.png"
         },
         {
           "name": "Unown V",
           "type": "Pokemon",
           "location": "Dead-end room",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/201-v.png"
         },
         {
           "name": "Unown W",
           "type": "Pokemon",
           "location": "Dead-end room",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/201-w.png"
         },
         {
           "name": "Unown X",
           "type": "Pokemon",
           "location": "Dead-end room",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/201-x.png"
         },
         {
           "name": "Unown Y",
           "type": "Pokemon",
           "location": "Dead-end room",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/201-y.png"
         },
         {
           "name": "Unown Z",
           "type": "Pokemon",
           "location": "Dead-end room",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/201-z.png"
         },
         {
           "name": "Fire Stone",
@@ -3193,14 +3193,14 @@ const platinumChecklist = {
           "type": "Pokemon",
           "location": "Maniac Tunnel (After catching 26 Unown)",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/201-question.png"
         },
         {
           "name": "Unown !",
           "type": "Pokemon",
           "location": "Maniac Tunnel (After catching 26 Unown)",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/201-exclamation.png"
         },
         {
           "name": "Rare Candy",
@@ -3720,7 +3720,7 @@ const platinumChecklist = {
           "notes": "Area 1/2",
           "location": "Only in morning/day",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/357.png"
         },
         {
           "name": "Skorupi",
@@ -5255,7 +5255,7 @@ const platinumChecklist = {
           "name": "Mr. Mime",
           "type": "Pokemon",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/122.png"
         },
         {
           "name": "Finneon",
@@ -7764,37 +7764,6 @@ const platinumChecklist = {
           "location": "In 4 of 21 honey trees, determined by Trainer & Secret ID",
           "obtain": "Honey Tree",
           "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/446.png"
-        },
-        {
-          "name": "Combee",
-          "type": "Pokemon",
-          "obtain": "Honey Tree",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/415.png"
-        },
-        {
-          "name": "Burmy x2",
-          "type": "Pokemon",
-          "obtain": "Honey Tree",
-          "notes": "Multi-evolution",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/412.png"
-        },
-        {
-          "name": "Cherubi",
-          "type": "Pokemon",
-          "obtain": "Honey Tree",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/420.png"
-        },
-        {
-          "name": "Aipom",
-          "type": "Pokemon",
-          "obtain": "Honey Tree",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/190.png"
-        },
-        {
-          "name": "Heracross",
-          "type": "Pokemon",
-          "obtain": "Honey Tree",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/214.png"
         }
       ],
       "Valley Windworks": [
@@ -7837,14 +7806,14 @@ const platinumChecklist = {
           "type": "Pokemon",
           "location": "Swarm",
           "obtain": "Swarm",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/287.png"
         },
         {
           "name": "Nincada",
           "type": "Pokemon",
           "location": "Poke Radar",
           "obtain": "Poke Radar",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/290.png"
         }
       ],
       "Fuego Ironworks": [
@@ -7924,14 +7893,14 @@ const platinumChecklist = {
           "type": "Pokemon",
           "location": "Dual-slot [Ruby]",
           "obtain": "Dual-slot [Ruby]",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/335.png"
         },
         {
           "name": "Seviper",
           "type": "Pokemon",
           "location": "Dual-slot [Sapphire]",
           "obtain": "Dual-slot [Sapphire]",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/336.png"
         }
       ],
       "Route 209": [
@@ -7986,7 +7955,7 @@ const platinumChecklist = {
           "type": "Pokemon",
           "location": "Poke Radar",
           "obtain": "Poke Radar",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/261.png"
         }
       ],
       "Lake Valor": [
@@ -8004,7 +7973,7 @@ const platinumChecklist = {
           "type": "Pokemon",
           "location": "Poke Radar",
           "obtain": "Poke Radar",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/277.png"
         }
       ],
       "Great Marsh": [
@@ -8048,7 +8017,7 @@ const platinumChecklist = {
           "type": "Pokemon",
           "notes": "Changing [National Dex]",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/352.png"
         }
       ],
       "Route 212 South": [
@@ -8074,7 +8043,7 @@ const platinumChecklist = {
           "notes": "Backlot",
           "location": "Trophy Garden",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/39.png"
         },
         {
           "name": "Meowth",
@@ -8114,7 +8083,7 @@ const platinumChecklist = {
           "notes": "Backlot",
           "location": "Trophy Garden",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/298.png"
         },
         {
           "name": "Plusle",
@@ -8138,7 +8107,7 @@ const platinumChecklist = {
           "notes": "Backlot",
           "location": "Trophy Garden",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/351.png"
         },
         {
           "name": "Bonsly",
@@ -8472,7 +8441,7 @@ const platinumChecklist = {
           "type": "Pokemon",
           "location": "Swarm",
           "obtain": "Swarm",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/83.png"
         }
       ],
       "Route 220": [
@@ -8481,7 +8450,7 @@ const platinumChecklist = {
           "type": "Pokemon",
           "notes": "Super Rod",
           "obtain": "Fishing - Super Rod",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/170.png"
         }
       ],
       "Pal Park": [
@@ -8895,7 +8864,7 @@ const platinumChecklist = {
           "type": "Pokemon",
           "notes": "Night only",
           "obtain": "Grass",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/354.png"
         },
         {
           "name": "Makuhita",
@@ -10123,7 +10092,7 @@ const platinumChecklist = {
           "name": "Registeel",
           "type": "Pokemon",
           "obtain": "Static",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/379.png"
         }
       ],
       "Iceberg Ruins": [
@@ -10131,7 +10100,7 @@ const platinumChecklist = {
           "name": "Regice",
           "type": "Pokemon",
           "obtain": "Static",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/378.png"
         }
       ],
       "Hall of Origin": [
@@ -10147,7 +10116,7 @@ const platinumChecklist = {
           "name": "Regirock",
           "type": "Pokemon",
           "obtain": "Static",
-          "sprite": ""
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/377.png"
         }
       ],
       "Flower Paradise": [
