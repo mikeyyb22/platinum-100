@@ -164,6 +164,48 @@ function renderPokemonCards(pokemonList) {
     });
 }
 
+// ******** FETCH TRADE/MIGRATION PKMN ********
+async function fetchTradeMigrationPokemon() {
+    try {
+        const response = await fetch(`${POKEAPI_BASE}/pokemon?limit=493`);
+        const data = await response.json();
+
+        // Get names already on list
+        const checklistNames = new Set(pokemonList.map((p) => p.name));
+
+        // Get all final evolution names from evolutionMap
+        const allFinals = new Set();
+        Object.values(evolutionMap).forEach((finals) => {
+            finals.forEach((name) => allFinals.add(name.toLowerCase()));
+        });
+
+        console.log('allFinals size:', allFinals.size);
+        console.log('Does allFinals have venusaur?', allFinals.has('venusaur'));
+        console.log('Does allFinals have infernape?', allFinals.has('infernape'));
+        console.log('checklistNames size:', checklistNames.size);
+        console.log('Does checklistNames have infernape?', checklistNames.has('infernape'));
+        console.log('PokeAPI returned:', data.results.length, 'pokemon');
+
+        const tradeMons = data.results
+            .map((p) => p.name)
+            .filter((name) => allFinals.has(name) && !checklistNames.has(name))          
+            .map((name) => ({
+                name: name,
+                displayName: formatDisplayName(name),
+                sprite: `${PLATINUM_SPRITE_BASE}/${name}.png`,
+                phase: 'Trade/Migration',
+                location: null
+            }));
+
+            return tradeMons;
+    } catch (error) {
+        console.error('Error fetching trade/migration Pokémon:', error);
+        return [];
+    }
+}
+
+
+
 // ******** FORM NAME MAP ********
 const formNameMap = {
     'wormadam': 'wormadam-plant',
@@ -210,4 +252,70 @@ pokemonSearch.addEventListener('input', () => {
 const checklistPokemon = getPokemonFromChecklist();
 
 // ******** START ********
-renderPokemonCards(pokemonList);
+async function init() {
+    renderPokemonCards(pokemonList);
+
+    const tradeMons = await fetchTradeMigrationPokemon();
+
+    if (tradeMons.length > 0) {
+        // Add divider
+        const divider = document.createElement('div');
+        divider.classList.add('section-divider');
+        pokemonCards.appendChild(divider);
+
+        //Add subtitle
+        const subtitle = document.createElement('h2');
+        subtitle.classList.add('trade-migration-title');
+        subtitle.textContent = 'Trade / Migration Pokemon';
+        pokemonCards.appendChild(subtitle);
+
+        // Render trade/migration cards
+        tradeMons.forEach((pokemon) => {
+            const saved = plannedMoves[pokemon.name] || [];
+
+            const card = document.createElement('div');
+            const img = document.createElement('img');
+            const info = document.createElement('div');
+            const nameEl = document.createElement('p');
+            const movesDiv = document.createElement('div');
+
+            card.classList.add('planner-card');
+            info.classList.add('planner-card-info');
+            nameEl.classList.add('planner-card-name');
+            movesDiv.classList.add('planner-card-moves');
+
+            img.src = './images/favicon.ico';
+            img.dataset.pokemonName = pokemon.name;
+            img.loading = 'lazy';
+            imageObserver.observe(img);
+            img.alt = pokemon.name;
+
+            nameEl.textContent = pokemon.displayName;
+
+            for (let i = 0; i < 4; i++) {
+                const moveSpan = document.createElement('span');
+                moveSpan.classList.add('planner-card-move');
+                if (saved[i]) {
+                    moveSpan.textContent = saved[i].name;
+                } else {
+                    moveSpan.textContent = '—';
+                    moveSpan.classList.add('empty');
+                }
+                movesDiv.appendChild(moveSpan);
+            }
+
+            info.appendChild(nameEl);
+            info.appendChild(movesDiv);
+            card.appendChild(img);
+            card.appendChild(info);
+
+            card.addEventListener('click', () => {
+                openPlanningModal(pokemon);
+            });
+
+            pokemonCards.appendChild(card);
+        });
+    }
+}
+
+init();
