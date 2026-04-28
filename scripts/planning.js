@@ -40,6 +40,51 @@ function getBaseType(type) {
     return type;
 }
 
+function formatDisplayName(name) {
+    const specialNames = {
+        'mr-mime': 'Mr. Mime',
+        'mime-jr': 'Mime Jr.',
+        'porygon-z': 'Porygon-Z',
+    };
+
+    return specialNames[name] || name.charAt(0).toUpperCase() + name.slice(1);
+}
+
+// ******** GET FINAL EVO ********
+function getFinalEvolutions(pokemonName) {
+    const finals = evolutionMap[pokemonName];
+    if (!finals) return [pokemonName.toLowerCase()];
+    return finals;
+}
+
+function buildPokemonList() {
+    const seen = new Set();
+    const finalList = [];
+    const checklistPokemon = getPokemonFromChecklist();
+
+    checklistPokemon.forEach((pokemon) => {
+        const finals = getFinalEvolutions(pokemon.name);
+
+        finals.forEach((finalName) => {
+            if (!seen.has(finalName)) {
+                seen.add(finalName);
+                finalList.push({
+                    name: finalName,
+                    displayName: formatDisplayName(finalName),
+                    sprite: `${PLATINUM_SPRITE_BASE}/${finalName}.png`,
+                    originalEntry: pokemon.name,
+                    phase: pokemon.phase,
+                    location: pokemon.location
+                });
+            }
+        });
+    });
+
+    return finalList;
+}
+
+const pokemonList = buildPokemonList();
+
 // ******** BUILD POKEMON LIST ********
 function getPokemonFromChecklist() {
     const seen = new Set();
@@ -86,11 +131,12 @@ function renderPokemonCards(pokemonList) {
         movesDiv.classList.add('planner-card-moves');
 
         img.src = './images/poke-ball-icon.svg';
-        img.dataset.src = pokemon.sprite || './images/poke-ball-icon.svg';
+        img.dataset.pokemonName = pokemon.name;
+        img.dataset.src = pokemon.sprite;
         imageObserver.observe(img);
         img.alt = pokemon.name;
         
-        nameEl.textContent = pokemon.name;
+        nameEl.textContent = pokemon.displayName;
 
         // Show up to 4 move slots
         for (let i = 0; i < 4; i++) {
@@ -118,12 +164,31 @@ function renderPokemonCards(pokemonList) {
     });
 }
 
+// ******** FORM NAME MAP ********
+const formNameMap = {
+    'wormadam': 'wormadam-plant',
+    // 'cherrim': 'cherrim-sunshine',
+    'giratina': 'giratina-altered',
+    'shaymin': 'shaymin-land',
+}
+
 // ******** INTERSECTION OBSERVER ********
 const imageObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
+    entries.forEach(async(entry) => {
         if (entry.isIntersecting) {
             const img = entry.target;
-            img.src = img.dataset.src;
+            const pokemonName = img.dataset.pokemonName;
+            
+            try {
+                const apiName = formNameMap[pokemonName] || pokemonName;
+                const response = await fetch(`${POKEAPI_BASE}/pokemon/${apiName}`);
+                const data = await response.json();
+                const id = data.id;
+                img.src = `${PLATINUM_SPRITE_BASE}/${id}.png`;
+            } catch (error) {
+                img.src = './images/poke-ball-icon.svg';
+            }
+
             imageObserver.unobserve(img);
         }
     });
@@ -132,11 +197,11 @@ const imageObserver = new IntersectionObserver((entries) => {
 });
 
 // ******** SEARCH ********
-pokemonSearch.addEventListener('inpuut', () => {
+pokemonSearch.addEventListener('input', () => {
     const query = pokemonSearch.value.toLowerCase().trim();
 
-    const filtered = checklistPokemon.filter((pokemon) =>
-        pokemon.name.toLowerCase().includes(query)
+    const filtered = pokemonList.filter((pokemon) =>
+        pokemon.displayName.toLowerCase().includes(query)
     );
 
     renderPokemonCards(filtered);
@@ -145,4 +210,4 @@ pokemonSearch.addEventListener('inpuut', () => {
 const checklistPokemon = getPokemonFromChecklist();
 
 // ******** START ********
-renderPokemonCards(checklistPokemon);
+renderPokemonCards(pokemonList);

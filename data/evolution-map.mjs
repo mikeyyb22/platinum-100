@@ -57,7 +57,7 @@ const evolutionMap = {
   "Budew":            ["roserade"],          // Budew → Roselia → Roserade (Shiny Stone)
   "Buizel":           ["floatzel"],          // Buizel → Floatzel
   "Buneary":          ["lopunny"],           // Buneary → Lopunny (friendship)
-  "Burmy x2":         ["wormadam", "mothim"], // Female → Wormadam; Male → Mothim
+  "Burmy":            ["wormadam", "mothim"], // Female → Wormadam; Male → Mothim
 
   // ── C ───────────────────────────────────────────────────────────────────────
   "Cacnea":           ["cacturne"],          // Cacnea → Cacturne
@@ -73,7 +73,7 @@ const evolutionMap = {
   "Chingling":        ["chimecho"],          // Chingling → Chimecho (friendship at night)
   "Clefairy":         ["clefable"],          // Clefairy → Clefable (Moon Stone)
   "Cleffa":           ["clefable"],          // Cleffa → Clefairy → Clefable (Moon Stone)
-  "Combee":           ["combee", "vespiquen"], // Female → Vespiquen; Male cannot evolve
+  "Combee":           ["vespiquen"],         // Female → Vespiquen; Male cannot evolve
   "Corsola":          ["corsola"],
   "Cresselia":        ["cresselia"],
   "Croagunk":         ["toxicroak"],         // Croagunk → Toxicroak
@@ -312,7 +312,7 @@ const evolutionMap = {
   "Wingull":          ["pelipper"],          // Wingull → Pelipper
   "Wobbuffet":        ["wobbuffet"],         // Wynaut → Wobbuffet; no further evo
   "Wooper":           ["quagsire"],          // Wooper → Quagsire
-  "Wurmple x2":       ["beautifly", "dustox"], // Silcoon path → Beautifly; Cascoon path → Dustox
+  "Wurmple":          ["beautifly", "dustox"], // Silcoon path → Beautifly; Cascoon path → Dustox
 
   // ── Y ───────────────────────────────────────────────────────────────────────
   "Yanma":            ["yanmega"],           // Yanma → Yanmega (Ancient Power level-up)
