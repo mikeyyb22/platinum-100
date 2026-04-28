@@ -703,7 +703,298 @@ dialog::backdrop {
     color: var(--text-secondary);
 }
 
+/* ******** PLANNER SECTION ******** */
+.planner-section {
+    margin: 10px;
+}
 
+.planner-section h2 {
+    margin: 10px 0;
+}
+
+/* ******** POKEMON CARDS ******** */
+#pokemon-cards {
+    display: grid;
+    gap: 15px;
+}
+
+.planner-card {
+    background-color: var(--bg-card);
+    border: solid 1px var(--border-color);
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+    transition: border-color 0.3s ease-in-out;
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+.planner-card.hover {
+    border-color: var(--accent-gold);
+}
+
+.planner-card img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+.planner-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.planner-card-name {
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.planner-card-moves {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.planner-card-move {
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background-color: var(--bg-secondary);
+    border: solid 1px var(--border-color);
+    color: var(--text-secondary);
+}
+
+.planner-card-move.empty {
+    border-style: dashed;
+    color: var(--border-color);
+}
+
+/* ******** PLANNING MODAL ******** */
+#planning-modal {
+    width: 90%;
+    max-width: 500px;
+    background-color: var(--bg-secondary);
+    border: solid 1px var(-accent-gold);
+    border-radius: 5px;
+    padding: 20px;
+    color: var(--text-primary);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+#planning-modal::backdrop {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-pokemon-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#modal-pokemon-sprite {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+#modal-pokemon-name {
+    color: var(--primary-color);
+    border-bottom: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1.3rem;
+}
+
+/* ******** SELECTED MOVES ******** */
+.selected-moves {
+    margin: 15px 0;
+    padding: 12px;
+    background-color: var(--bg-card);
+    border: solid 1px var(--border-coolor);
+    border-radius: 5px;
+}
+
+.selected-moves h3 {
+    color: var(--primary-color);
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+#move-count {
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+#selected-moves-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.selected-move-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px 10px;
+    background-color: var(--bg-secondary);
+    border: solid 1px var(--accent-gold);
+    border-radius: 3px;
+}
+
+.selected-move-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.selected-move-how {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.remove-move-btn {
+    background: none;
+    border: solid 1px var(--accent-red);
+    color: var(--accent-red);
+    border-radius: 3px;
+    font-size: 0.75rem;
+    padding: 1px 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.remove-move-btn:hover {
+    background-color: var(--accent-red);
+    color: var(--text-primary);
+}
+
+/* ******** AVAILABLE MOVES ******** */
+.available-moves {
+    margin-top: 10px;
+}
+
+.moves-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.move-filter-btn {
+    background-color: var(--bg-card);
+    color: var(--text-secondary);
+    border: solid 1px var(--border-color);
+    border-radius: 3px;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.move-filter-btn:hover {
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+}
+
+.move-filter-btn.active {
+    background-color: var(--accent-gold);
+    color: var(--bg-primary);
+    border-color: var(--accent-gold);
+    font-weight: 700;
+}
+
+.egg-toggle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.egg-toggle input {
+    accent-color: var(--accent-gold);
+    cursor: pointer;
+}
+
+#available-moves-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-height: 35vh;
+    overflow-y: auto;
+}
+
+.available-move-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    background-color: var(--bg-card);
+    border: solid 1px var(--border-color);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.available-move-item:hover {
+    border-color: var(--primary-color);
+}
+
+.available-move-item.selected {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.available-move-item.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+    border-color: var(--accent-red);
+}
+
+.move-name {
+    font-size: 0.9rem;
+    color: var(--text-primary);
+}
+
+.move-method-tag {
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 3px;
+    border: solid 1px var(--border-color);
+    color: var(--text-secondary);
+}
+
+.tm-conflict-warning {
+    font-size: 0.75rem;
+    color: var(--accent-red);
+    padding: 6px 10px;
+    border: solid 1px var(--accent-red);
+    border-radius: 3px;
+    margin-top: 5px;
+    display: none;
+}
+
+.tm-conflict-warning.show {
+    display: block;
+}
 
 /* ******** FOOTER ******** */
 footer {

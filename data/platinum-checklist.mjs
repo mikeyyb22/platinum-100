@@ -440,9 +440,9 @@ const platinumChecklist = {
       ],
       "Route 204": [
         {
-          "name": "Wurmple x2",
+          "name": "Wurmple",
           "type": "Pokemon",
-          "notes": "Multi-evolution",
+          "notes": "Multi-evolution - catch 2",
           "obtain": "Grass",
           "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/265.png"
         },
@@ -688,10 +688,10 @@ const platinumChecklist = {
           "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/415.png"
         },
         {
-          "name": "Burmy x2",
+          "name": "Burmy",
           "type": "Pokemon",
           "obtain": "Honey Tree",
-          "notes": "Multi-evolution",
+          "notes": "Multi-evolution - catch 2",
           "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/412.png"
         },
         {
@@ -719,7 +719,7 @@ const platinumChecklist = {
           "type": "Pokemon",
           "notes": "Every Friday after Mars has been defeated (but not the day of the defeat)",
           "obtain": "Grass",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/427.png"
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/425.png"
         },
         {
           "name": "Potion",
@@ -953,7 +953,7 @@ const platinumChecklist = {
           "name": "Buneary",
           "type": "Pokemon",
           "obtain": "Grass",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/429.png"
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/427.png"
         },
         {
           "name": "Antidote",
@@ -1117,13 +1117,13 @@ const platinumChecklist = {
           "name": "Chingling",
           "type": "Pokemon",
           "obtain": "Grass",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/435.png"
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/433.png"
         },
         {
           "name": "Bronzor",
           "type": "Pokemon",
           "obtain": "Grass",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/438.png"
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/436.png"
         },
         {
           "name": "Great ball",
@@ -2094,7 +2094,7 @@ const platinumChecklist = {
           "type": "Pokemon",
           "location": "Hallowed Tower (Odd Keystone)",
           "obtain": "Grass",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/444.png"
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/442.png"
         },
         {
           "name": "Leppa Berry",
@@ -3459,13 +3459,13 @@ const platinumChecklist = {
           "name": "Shellos E",
           "type": "Pokemon",
           "obtain": "Grass",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/423.png"
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/422.png"
         },
         {
           "name": "Chatot",
           "type": "Pokemon",
           "obtain": "Grass",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/443.png"
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/441.png"
         },
         {
           "name": "Remoraid",
@@ -8069,7 +8069,7 @@ const platinumChecklist = {
       ],
       "Pokemon Mansion": [
         {
-          "name": "JigglyPuff",
+          "name": "Jigglypuff",
           "type": "Pokemon",
           "notes": "Backlot",
           "location": "Trophy Garden",
@@ -8146,7 +8146,7 @@ const platinumChecklist = {
           "notes": "Backlot",
           "location": "Trophy Garden",
           "obtain": "Grass",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/440.png"
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/438.png"
         },
         {
           "name": "Mime Jr.",
@@ -8154,7 +8154,7 @@ const platinumChecklist = {
           "notes": "Backlot",
           "location": "Trophy Garden",
           "obtain": "Grass",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/441.png"
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/439.png"
         },
         {
           "name": "Happiny",
@@ -8162,7 +8162,7 @@ const platinumChecklist = {
           "notes": "Backlot",
           "location": "Trophy Garden",
           "obtain": "Grass",
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/442.png"
+          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/440.png"
         }
       ],
       "Route 210 North": [

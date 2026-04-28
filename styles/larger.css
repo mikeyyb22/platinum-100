@@ -107,6 +107,20 @@
         padding: 0 40px;
     }
 
+    .planner-section {
+        max-width: 1200px;
+        margin: 10px auto;
+        padding: 0 40px;
+    }
+
+    #pokemon-cards {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #planning-modal {
+        max-width: 600px;
+    }
+
     /* ******** FOOTER ******** */
     footer {
         flex-direction: row;
