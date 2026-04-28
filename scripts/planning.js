@@ -5,7 +5,7 @@ import evolutionMap from '../data/evolution-map.mjs';
 
 // ******** CONSTANTS ********
 const POKEAPI_BASE = 'https://pokeapi.co/api/v2';
-const PLATINUM_SPRITE_BASE = 'https://raw.githubusercontent.com/POKEAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum';
+const PLATINUM_SPRITE_BASE = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum';
 
 // ******** STATE ********
 let plannedMoves = JSON.parse(localStorage.getItem('platinumPlanning')) || {};
@@ -183,12 +183,12 @@ async function fetchTradeMigrationPokemon() {
             finals.forEach((name) => allFinals.add(name.toLowerCase()));
         });
 
-        console.log('allFinals size:', allFinals.size);
-        console.log('Does allFinals have venusaur?', allFinals.has('venusaur'));
-        console.log('Does allFinals have infernape?', allFinals.has('infernape'));
-        console.log('checklistNames size:', checklistNames.size);
-        console.log('Does checklistNames have infernape?', checklistNames.has('infernape'));
-        console.log('PokeAPI returned:', data.results.length, 'pokemon');
+        // console.log('allFinals size:', allFinals.size);
+        // console.log('Does allFinals have venusaur?', allFinals.has('venusaur'));
+        // console.log('Does allFinals have infernape?', allFinals.has('infernape'));
+        // console.log('checklistNames size:', checklistNames.size);
+        // console.log('Does checklistNames have infernape?', checklistNames.has('infernape'));
+        // console.log('PokeAPI returned:', data.results.length, 'pokemon');
 
         const tradeMons = data.results
             .map((p) => p.name)
@@ -240,8 +240,8 @@ async function fetchMoves(pokemonName) {
     try {
         // Fetch evo line to get pre-evo moves
         const speciesRes = await fetch(`${POKEAPI_BASE}/pokemon-species/${pokemonName}`);
-        console.log('Fetching species for:', pokemonName);
-        console.log('Species response status:', speciesRes.status);
+        // console.log('Fetching species for:', pokemonName);
+        // console.log('Species response status:', speciesRes.status);
         const speciesData = await speciesRes.json();
         const evoChainRes = await fetch(speciesData.evolution_chain.url);
         const evoChainData = await evoChainRes.json();
@@ -256,25 +256,29 @@ async function fetchMoves(pokemonName) {
 
         // Fetch moves for each member of evo line
         const allMoves = {};
-        await Promise.all(evoLine.map(async(name) => {
+        await Promise.all(evoLine.map(async (name) => {
             const res = await fetch(`${POKEAPI_BASE}/pokemon/${name}`);
             const data = await res.json();
             data.moves.forEach((moveEntry) => {
-                const platinumData = moveEntry.version_group_details.find((v) => v.version_group.name === 'platinum');
-                if (!platinumData) return;
+                const platinumVersions = moveEntry.version_group_details.filter(
+                    (v) => v.version_group.name === 'platinum'
+                );
+                if (platinumVersions.length === 0) return;
 
                 const moveName = moveEntry.move.name;
-                const method = platinumData.move_learn_method.name;
-                const level = platinumData.level_learned_at;
 
-                if (!allMoves[moveName]) {
-                    allMoves[moveName] = {
+                platinumVersions.forEach((platinumData) => {
+                    const method = platinumData.move_learn_method.name;
+                    const level = platinumData.level_learned_at;
+                    const key = `${moveName}-${method}-${name}`;
+
+                    allMoves[key] = {
                         name: moveName,
                         method: method,
                         level: level,
                         learnedBy: name
-                    }
-                }
+                    };
+                });
             });
         }));
 
@@ -288,14 +292,12 @@ async function fetchMoves(pokemonName) {
 
         const sortedMovesObj = {};
         sortedMoves.forEach((move) => {
-            sortedMovesObj[move.name] = move;
+            const key = `${move.name}-${move.method}-${move.learnedBy}`;
+            sortedMovesObj[key] = move;
         });
 
         moveCache[pokemonName] = sortedMovesObj;
         return sortedMovesObj;
-
-        moveCache[pokemonName] = allMoves;
-        return allMoves;
     } catch (error) {
         console.error('Error fetching moves:', error);
         return {};
@@ -304,6 +306,9 @@ async function fetchMoves(pokemonName) {
 
 // ******** AVAILABLE MOVES ********
 async function renderAvailableMoves(pokemon) {
+    // console.log('renderAvailableMoves called with:', pokemon.name);
+    // console.log('activeMoveFilter:', activeMoveFilter);
+    // console.log('moveCache has pokemon?', !!moveCache[pokemon.name]);
     availableMovesList.innerHTML = '';
     availableMovesList.innerHTML = '<li style="color: var(--text-secondary); padding: 10px;">Loading moves...</li>';
 
@@ -314,8 +319,9 @@ async function renderAvailableMoves(pokemon) {
     availableMovesList.innerHTML = '';
 
     Object.values(moves).forEach((move) => {
+        // console.log('move.method:', move.method, '| activeMoveFilter:', activeMoveFilter, '| match:', move.method === activeMoveFilter);
         // Filter by method
-        if (activeMoveFilter !== 'all' && move.methdo !== activeMoveFilter) return;
+        if (activeMoveFilter !== 'all' && move.method !== activeMoveFilter) return;
 
         // Hide egg moves unless toggled
         if (move.method === 'egg' && !showEggMoves) return;
@@ -510,11 +516,12 @@ function updatePlannerCard(pokemon) {
 
 // ******** MODAL EVENT LISTENERS ********
 moveFilterBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', async () => {
         activeMoveFilter = btn.dataset.moveFilter;
+        // console.log('Filter clicked, activeMoveFilter set to:', activeMoveFilter);
         moveFilterBtns.forEach((b) => b.classList.remove('active'));
         btn.classList.add('active');
-        renderAvailableMoves(currentPokemon);
+        await renderAvailableMoves(currentPokemon);
     });
 });
 
