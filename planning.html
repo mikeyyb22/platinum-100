@@ -62,7 +62,7 @@
                     <img id="modal-pokemon-sprite" src="" alt="">
                     <h2 id="modal-pokemon-name"></h2>
                 </div>
-                <button id="planning-modal-close">&#00D7</button>
+                <button id="planning-modal-close">&#x00D7;</button>
             </div>
             <div class="modal-moves">
                 <div class="selected-moves">
@@ -72,13 +72,20 @@
                 <div class="available-moves">
                     <div class="moves-filter-bar">
                         <button class="move-filter-btn active" data-move-filter="all">All</button>
-                        <button class="move-filter-btn active" data-move-filter="level-up">Level Up</button>
-                        <button class="move-filter-btn active" data-move-filter="machine">TM/HM</button>
-                        <button class="move-filter-btn active" data-move-filter="tutor">Tutor</button>
-                        <button class="move-filter-btn active" data-move-filter="egg">Egg</button>
+                        <button class="move-filter-btn" data-move-filter="level-up">Level Up</button>
+                        <button class="move-filter-btn" data-move-filter="machine">TM/HM</button>
+                        <button class="move-filter-btn" data-move-filter="tutor">Tutor</button>
+                        <button class="move-filter-btn" data-move-filter="egg">Egg</button>
                         <label class="egg-toggle">
                             <input type="checkbox" id="egg-moves-toggle">
                             Show Egg Moves
+                        </label>
+                    </div>
+                    <div id="tm-conflict-warning" class="tm-conflict-warning">
+                        <p id="tm-conflict-text"></p>
+                        <label class="tm-conflict-dismiss">
+                            <input type="checkbox" id="tm-conflict-dismiss">
+                            Understood, close warning
                         </label>
                     </div>
                     <ul id="available-moves-list"></ul>
