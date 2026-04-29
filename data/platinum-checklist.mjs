@@ -7,7 +7,7 @@ const platinumChecklist = {
           "type": "Item",
           "location": "Mother",
           "hidden": false,
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/running-shoes.png"
+          "sprite": "https://archives.bulbagarden.net/media/upload/4/42/Bag_Running_Shoes_Sprite.png"
         },
         {
           "name": "Journal",
@@ -78,7 +78,7 @@ const platinumChecklist = {
           "type": "Item",
           "location": "Prof. Rowan",
           "hidden": false,
-          "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pokedex.png"
+          "sprite": "https://archives.bulbagarden.net/media/upload/e/ea/Menu_Icon_Pokedex_Platinum.png"
         },
         {
           "name": "TM 27 [Return]",
