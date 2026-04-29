@@ -1764,7 +1764,7 @@ const tmLocations = [
     "name": "HM01",
     "move": "Cut",
     "type": "Normal",
-    "infinite": false,
+    "infinite": true,
     "locations": [
       {
         "name": "Eterna City",
@@ -1781,7 +1781,7 @@ const tmLocations = [
     "name": "HM02",
     "move": "Fly",
     "type": "Flying",
-    "infinite": false,
+    "infinite": true,
     "locations": [
       {
         "name": "Veilstone City",
@@ -1798,7 +1798,7 @@ const tmLocations = [
     "name": "HM03",
     "move": "Surf",
     "type": "Water",
-    "infinite": false,
+    "infinite": true,
     "locations": [
       {
         "name": "Celestic Town",
@@ -1815,7 +1815,7 @@ const tmLocations = [
     "name": "HM04",
     "move": "Strength",
     "type": "Normal",
-    "infinite": false,
+    "infinite": true,
     "locations": [
       {
         "name": "Iron Island",
@@ -1832,7 +1832,7 @@ const tmLocations = [
     "name": "HM05",
     "move": "Defog",
     "type": "Flying",
-    "infinite": false,
+    "infinite": true,
     "locations": [
       {
         "name": "Solaceon Ruins",
@@ -1849,7 +1849,7 @@ const tmLocations = [
     "name": "HM06",
     "move": "Rock Smash",
     "type": "Fighting",
-    "infinite": false,
+    "infinite": true,
     "locations": [
       {
         "name": "Oreburgh Gate",
@@ -1866,7 +1866,7 @@ const tmLocations = [
     "name": "HM07",
     "move": "Waterfall",
     "type": "Water",
-    "infinite": false,
+    "infinite": true,
     "locations": [
       {
         "name": "Sunyshore City",
@@ -1883,7 +1883,7 @@ const tmLocations = [
     "name": "HM08",
     "move": "Rock Climb",
     "type": "Normal",
-    "infinite": false,
+    "infinite": true,
     "locations": [
       {
         "name": "Route 217",

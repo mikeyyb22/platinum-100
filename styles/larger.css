@@ -121,6 +121,17 @@
         max-width: 600px;
     }
 
+    /* ******** TEAMS ******** */
+    .teams-section {
+        max-width: 1200px;
+        margin: 10px auto;
+        padding: 0 40px;
+    }
+
+    .team-cards {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
     /* ******** FOOTER ******** */
     footer {
         flex-direction: row;

@@ -49,6 +49,39 @@
             <input type="text" id="pokemon-search" placeholder="Search Pokemon...">
         </div>
 
+        <!-- Teams Section -->
+        <div class="teams-section" id="teams-section">
+            <div class="teams-header">
+                <h2>Teams</h2>
+                <button id="create-team-btn" class="create-team-btn">+ Create Team</button>
+            </div>
+            <div id="teams-container"></div>
+        </div>
+
+        <!-- Create Team Dialog -->
+        <dialog id="create-team-dialog">
+            <div class="modal-header">
+                <h2>Create Team</h2>
+                <button id="create-team-dialog-close">&#215;</button>
+            </div>
+            <div class="create-team-form">
+                <label>
+                    Team Name
+                    <input type="text" id="team-name-input" placeholder="e.g. Early Game Team" maxlength="30">
+                </label>
+                <button id="create-team-confirm" class="hero-btn">Create</button>
+            </div>
+        </dialog>
+
+        <!-- Color Picker Dialog -->
+        <dialog id="color-picker-dialog">
+            <div class="modal-header">
+                <h2 id="color-picker-title">Choose Team Color</h2>
+                <button id="color-picker-close">&#215;</button>
+            </div>
+            <div class="color-options" id="color-options"></div>
+        </dialog>
+
         <!-- Pokemon Selection -->
         <section class="planner-section">
             <h2>Gameplay Pokémon</h2>

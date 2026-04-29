@@ -15,6 +15,8 @@ let showEggMoves = false;
 let moveCache = {};
 let moveTypeCache = {};
 let dismissedWarnings = new Set();
+let teams = JSON.parse(localStorage.getItem('platinumTeams')) || {};
+let colorPickerTargetTeam = null;
 
 // ******** DOM ********
 const pokemonCards = document.querySelector('#pokemon-cards');
@@ -31,10 +33,25 @@ const moveFilterBtns = document.querySelectorAll('.move-filter-btn');
 const tmConflictWarning = document.querySelector('#tm-conflict-warning');
 const tmConflictText = document.querySelector('#tm-conflict-text');
 const tmConflictDismiss = document.querySelector('#tm-conflict-dismiss');
+const teamsContainer = document.querySelector('#teams-container');
+const createTeamBtn = document.querySelector('#create-team-btn');
+const createTeamDialog = document.querySelector('#create-team-dialog');
+const createTeamDialogClose = document.querySelector('#create-team-dialog-close');
+const teamNameInput = document.querySelector('#team-name-input');
+const createTeamConfirm = document.querySelector('#create-team-confirm');
+const colorPickerDialog = document.querySelector('#color-picker-dialog');
+const colorPickerClose = document.querySelector('#color-picker-close');
+const colorPickerTitle = document.querySelector('#color-picker-title');
+const colorOptions = document.querySelector('#color-options');
 
 // ******** HELPERS ********
 const phases = platinumChecklist.phases;
 const phaseNames = Object.keys(phases);
+const TEAM_COLORS = [
+    '#ffffff', '#c9a84c', '#8b1a1a', '#4a7fa5',
+    '#78c850', '#f08030', '#a040a0', '#705898',
+    '#6890f0', '#98d8d8', '#f85888', '#b8b8d0'
+];
 
 function getBaseType(type) {
     if (type.includes('Item')) return 'Item';
@@ -310,25 +327,45 @@ async function fetchMoves(pokemonName) {
 
     try {
         // Fetch evo line to get pre-evo moves
-        const speciesRes = await fetch(`${POKEAPI_BASE}/pokemon-species/${pokemonName}`);
-        // console.log('Fetching species for:', pokemonName);
-        // console.log('Species response status:', speciesRes.status);
+        const speciesName = speciesNameMap[pokemonName] || pokemonName;
+        const speciesRes = await fetch(`${POKEAPI_BASE}/pokemon-species/${speciesName}`);
         const speciesData = await speciesRes.json();
         const evoChainRes = await fetch(speciesData.evolution_chain.url);
         const evoChainData = await evoChainRes.json();
 
         // Walk evo chain to get all members
         const evoLine = [];
-        function walkChain(node) {
-            evoLine.push(node.species.name);
-            node.evolves_to.forEach(walkChain);
+
+        function walkChain(node, targetName) {
+            const currentName = formNameMap[node.species.name] || node.species.name;
+            evoLine.push(currentName);
+
+            // If this is the target, stop here
+            if (currentName === targetName) return true;
+
+            // Search branches for the target
+            for (const branch of node.evolves_to) {
+                if (walkChain(branch, targetName)) return true;
+            }
+
+            // Target not found down this branch — remove this node
+            evoLine.pop();
+            return false;
         }
-        walkChain(evoChainData.chain);
+
+        walkChain(evoChainData.chain, pokemonName);
+
+        // If nothing matched (e.g. form variants), just use the pokemon itself
+        if (evoLine.length === 0) {
+            evoLine.push(formNameMap[pokemonName] || pokemonName);
+        }
 
         // Fetch moves for each member of evo line
         const allMoves = {};
         await Promise.all(evoLine.map(async (name) => {
-            const res = await fetch(`${POKEAPI_BASE}/pokemon/${name}`);
+            const apiName = formNameMap[name] || name;
+            const res = await fetch(`${POKEAPI_BASE}/pokemon/${apiName}`);
+            console.log('Status for', apiName, ':', res.status);
             const data = await res.json();
             data.moves.forEach((moveEntry) => {
                 const platinumVersions = moveEntry.version_group_details.filter(
@@ -730,6 +767,250 @@ function updatePlannerCard(pokemon) {
     });
 }
 
+// ******** SAVE TEAMS ********
+function saveTeams() {
+    localStorage.setItem('platinumTeams', JSON.stringify(teams));
+}
+
+// ******** RENDER TEAMS ********
+function renderTeams() {
+    teamsContainer.innerHTML = '';
+
+    Object.keys(teams).forEach((teamId) => {
+        const team = teams[teamId];
+        const color = team.color || '#ffffff';
+
+        const teamGroup = document.createElement('div');
+        teamGroup.classList.add('team-group');
+        teamGroup.style.borderColor = color;
+        teamGroup.dataset.teamId = teamId;
+
+        const header = document.createElement('div');
+        header.classList.add('team-group-header');
+
+        const teamName = document.createElement('span');
+        teamName.classList.add('team-group-name');
+        teamName.textContent = `${team.name} (${team.members.length}/6)`;
+        teamName.style.color = color;
+
+        const actions = document.createElement('div');
+        actions.classList.add('team-group-actions');
+
+        const colorBtn = document.createElement('button');
+        colorBtn.classList.add('team-color-btn');
+        colorBtn.textContent = '🎨 Color';
+        colorBtn.addEventListener('click', () => {
+            openColorPicker(teamId);
+        });
+
+        const deleteBtn = document.createElement('button');
+        deleteBtn.classList.add('team-delete-btn');
+        deleteBtn.textContent = '✕ Delete';
+        deleteBtn.addEventListener('click', () => {
+            deleteTeam(teamId);
+        });
+
+        actions.appendChild(colorBtn);
+        actions.appendChild(deleteBtn);
+        header.appendChild(teamName);
+        header.appendChild(actions);
+
+        const teamCards = document.createElement('div');
+        teamCards.classList.add('team-cards');
+
+        // Render member cards
+        team.members.forEach((memberName) => {
+            const pokemon = pokemonList.find((p) => p.name === memberName)
+                || { name: memberName, displayName: formatDisplayName(memberName) };
+            teamCards.appendChild(buildPlannerCard(pokemon, teamId));
+        });
+
+        // Fill empty slots
+        for (let i = team.members.length; i < 6; i++) {
+            const emptySlot = document.createElement('div');
+            emptySlot.classList.add('team-slot-empty');
+            emptySlot.textContent = 'Empty Slot';
+            teamCards.appendChild(emptySlot);
+        }
+
+        teamGroup.appendChild(header);
+        teamGroup.appendChild(teamCards);
+        teamsContainer.appendChild(teamGroup);
+    });
+}
+
+// ******** BUILD PLANNER CARD ********
+function buildPlannerCard(pokemon, teamId = null) {
+    const saved = plannedMoves[pokemon.name] || [];
+
+    const card = document.createElement('div');
+    const img = document.createElement('img');
+    const info = document.createElement('div');
+    const nameEl = document.createElement('p');
+    const movesDiv = document.createElement('div');
+    const teamSelect = document.createElement('select');
+
+    card.classList.add('planner-card');
+    info.classList.add('planner-card-info');
+    nameEl.classList.add('planner-card-name');
+    movesDiv.classList.add('planner-card-moves');
+    teamSelect.classList.add('card-team-select');
+
+    img.src = './images/favicon.ico';
+    img.dataset.pokemonName = pokemon.name;
+    imageObserver.observe(img);
+    img.alt = pokemon.name;
+
+    nameEl.textContent = pokemon.displayName;
+
+    // Move slots
+    for (let i = 0; i < 4; i++) {
+        const moveSpan = document.createElement('span');
+        moveSpan.classList.add('planner-card-move');
+        if (saved[i]) {
+            moveSpan.textContent = formatMoveName(saved[i].name);
+            getMoveType(saved[i].name).then((type) => {
+                const color = getMoveTypeColor(type);
+                moveSpan.style.borderColor = color;
+                moveSpan.style.boxShadow = `0 0 4px ${color}40`;
+            });
+        } else {
+            moveSpan.textContent = '—';
+            moveSpan.classList.add('empty');
+        }
+        movesDiv.appendChild(moveSpan);
+    }
+
+    // Team dropdown
+    const noTeamOption = document.createElement('option');
+    noTeamOption.value = '';
+    noTeamOption.textContent = '— Add to team —';
+    teamSelect.appendChild(noTeamOption);
+
+    Object.keys(teams).forEach((id) => {
+        const option = document.createElement('option');
+        option.value = id;
+        option.textContent = teams[id].name;
+        if (id === teamId) option.selected = true;
+        teamSelect.appendChild(option);
+    });
+
+    teamSelect.addEventListener('change', (e) => {
+        e.stopPropagation();
+        const selectedTeamId = teamSelect.value;
+        assignToTeam(pokemon.name, selectedTeamId, teamId);
+    });
+
+    // Stop card click from opening modal when clicking dropdown
+    teamSelect.addEventListener('click', (e) => e.stopPropagation());
+
+    info.appendChild(nameEl);
+    info.appendChild(movesDiv);
+    info.appendChild(teamSelect);
+    card.appendChild(img);
+    card.appendChild(info);
+
+    card.addEventListener('click', () => {
+        openPlanningModal(pokemon);
+    });
+
+    return card;
+}
+
+// ******** ASSIGN TO TEAM ********
+function assignToTeam(pokemonName, newTeamId, oldTeamId = null) {
+    // Remove from old team if applicable
+    if (oldTeamId && teams[oldTeamId]) {
+        teams[oldTeamId].members = teams[oldTeamId].members.filter((m) => m !== pokemonName);
+    }
+
+    // Add to new team if selected
+    if (newTeamId && teams[newTeamId]) {
+        if (teams[newTeamId].members.length >= 6) {
+            alert(`${teams[newTeamId].name} is full! (max 6 Pokémon)`);
+            return;
+        }
+        if (!teams[newTeamId].members.includes(pokemonName)) {
+            teams[newTeamId].members.push(pokemonName);
+        }
+    }
+
+    saveTeams();
+    renderTeams();
+    renderMainCards();
+}
+
+// ******** DELETE TEAM ********
+function deleteTeam(teamId) {
+    delete teams[teamId];
+    saveTeams();
+    renderTeams();
+    renderMainCards();
+}
+
+// ******** COLOR PICKER ********
+function openColorPicker(teamId) {
+    colorPickerTargetTeam = teamId;
+    colorPickerTitle.textContent = `Choose Color for ${teams[teamId].name}`;
+    colorOptions.innerHTML = '';
+
+    TEAM_COLORS.forEach((color) => {
+        const swatch = document.createElement('div');
+        swatch.classList.add('color-option');
+        swatch.style.backgroundColor = color;
+        if (teams[teamId].color === color) swatch.classList.add('selected');
+
+        swatch.addEventListener('click', () => {
+            teams[teamId].color = color;
+            saveTeams();
+            colorPickerDialog.close();
+            renderTeams();
+            renderMainCards();
+        });
+
+        colorOptions.appendChild(swatch);
+    });
+
+    colorPickerDialog.showModal();
+}
+
+// ******** RENDER MAIN CARDS ********
+function renderMainCards() {
+    pokemonCards.innerHTML = '';
+
+    // Get all Pokémon already on a team
+    const onTeam = new Set();
+    Object.values(teams).forEach((team) => {
+        team.members.forEach((m) => onTeam.add(m));
+    });
+
+    // Pokémon with moves but not on a team
+    const withMoves = pokemonList.filter((p) =>
+        !onTeam.has(p.name) && plannedMoves[p.name] && plannedMoves[p.name].length > 0
+    );
+
+    // Remaining Pokémon
+    const remaining = pokemonList.filter((p) =>
+        !onTeam.has(p.name) && (!plannedMoves[p.name] || plannedMoves[p.name].length === 0)
+    );
+
+    if (withMoves.length > 0) {
+        const subtitle = document.createElement('h3');
+        subtitle.classList.add('section-subtitle');
+        subtitle.textContent = 'Planned Pokémon';
+        pokemonCards.appendChild(subtitle);
+        withMoves.forEach((p) => pokemonCards.appendChild(buildPlannerCard(p)));
+    }
+
+    if (remaining.length > 0) {
+        const subtitle = document.createElement('h3');
+        subtitle.classList.add('section-subtitle');
+        subtitle.textContent = 'All Pokémon';
+        pokemonCards.appendChild(subtitle);
+        remaining.forEach((p) => pokemonCards.appendChild(buildPlannerCard(p)));
+    }
+}
+
 // ******** MODAL EVENT LISTENERS ********
 moveFilterBtns.forEach((btn) => {
     btn.addEventListener('click', async () => {
@@ -756,6 +1037,42 @@ planningModal.addEventListener('click', (e) => {
     }
 });
 
+// ******** CREATE TEAM LISTENERS ********
+createTeamBtn.addEventListener('click', () => {
+    teamNameInput.value = '';
+    createTeamDialog.showModal();
+});
+
+createTeamDialogClose.addEventListener('click', () => {
+    createTeamDialog.close();
+});
+
+createTeamConfirm.addEventListener('click', () => {
+    const name = teamNameInput.value.trim();
+    if (!name) return;
+
+    const teamId = `team-${Date.now()}`;
+    teams[teamId] = {
+        name: name,
+        color: '#ffffff',
+        members: []
+    };
+
+    saveTeams();
+    createTeamDialog.close();
+    renderTeams();
+    renderMainCards();
+});
+
+// Allow Enter key to confirm team creation
+teamNameInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') createTeamConfirm.click();
+});
+
+colorPickerClose.addEventListener('click', () => {
+    colorPickerDialog.close();
+});
+
 // ******** TM CONFLICT DISMISS ********
 tmConflictDismiss.addEventListener('change', () => {
     if (tmConflictDismiss.checked) {
@@ -764,12 +1081,18 @@ tmConflictDismiss.addEventListener('change', () => {
     }
 })
 
-// ******** FORM NAME MAP ********
+// ******** NAME MAPS ********
 const formNameMap = {
     'wormadam': 'wormadam-plant',
     // 'cherrim': 'cherrim-sunshine',
     'giratina': 'giratina-altered',
     'shaymin': 'shaymin-land',
+}
+
+const speciesNameMap = {
+    'wormadam': 'wormadam',
+    'giratina': 'giratina',
+    'shaymin': 'shaymin',
 }
 
 // ******** INTERSECTION OBSERVER ********
@@ -812,72 +1135,23 @@ const checklistPokemon = getPokemonFromChecklist();
 
 // ******** START ********
 async function init() {
-    renderPokemonCards(pokemonList);
+    renderTeams();
+    renderMainCards();
 
     const tradeMons = await fetchTradeMigrationPokemon();
 
     if (tradeMons.length > 0) {
-        // Add divider
         const divider = document.createElement('div');
         divider.classList.add('section-divider');
         pokemonCards.appendChild(divider);
 
-        //Add subtitle
         const subtitle = document.createElement('h2');
         subtitle.classList.add('trade-migration-title');
-        subtitle.textContent = 'Trade / Migration Pokemon';
+        subtitle.textContent = 'Trade / Migration Pokémon';
         pokemonCards.appendChild(subtitle);
 
-        // Render trade/migration cards
         tradeMons.forEach((pokemon) => {
-            const saved = plannedMoves[pokemon.name] || [];
-
-            const card = document.createElement('div');
-            const img = document.createElement('img');
-            const info = document.createElement('div');
-            const nameEl = document.createElement('p');
-            const movesDiv = document.createElement('div');
-
-            card.classList.add('planner-card');
-            info.classList.add('planner-card-info');
-            nameEl.classList.add('planner-card-name');
-            movesDiv.classList.add('planner-card-moves');
-
-            img.src = './images/favicon.ico';
-            img.dataset.pokemonName = pokemon.name;
-            img.loading = 'lazy';
-            imageObserver.observe(img);
-            img.alt = pokemon.name;
-
-            nameEl.textContent = pokemon.displayName;
-
-            for (let i = 0; i < 4; i++) {
-                const moveSpan = document.createElement('span');
-                moveSpan.classList.add('planner-card-move');
-                if (saved[i]) {
-                    moveSpan.textContent = formatMoveName(saved[i].name);
-                    getMoveType(saved[i].name).then((type) => {
-                        const color = getMoveTypeColor(type);
-                        moveSpan.style.borderColor = color;
-                        moveSpan.style.boxShadow = `0 0 4px ${color}40`;
-                    });
-                } else {
-                    moveSpan.textContent = '—';
-                    moveSpan.classList.add('empty');
-                }
-                movesDiv.appendChild(moveSpan);
-            }
-
-            info.appendChild(nameEl);
-            info.appendChild(movesDiv);
-            card.appendChild(img);
-            card.appendChild(info);
-
-            card.addEventListener('click', () => {
-                openPlanningModal(pokemon);
-            });
-
-            pokemonCards.appendChild(card);
+            pokemonCards.appendChild(buildPlannerCard(pokemon));
         });
     }
 }

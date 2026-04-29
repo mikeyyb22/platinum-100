@@ -712,6 +712,201 @@ dialog::backdrop {
     margin: 10px 0;
 }
 
+/* ******** TEAMS SECTION ******** */
+.teams-section {
+    margin: 10px;
+}
+
+.teams-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.teams-header h2 {
+    margin: 0;
+    padding: 0;
+    border-bottom: none;
+}
+
+.create-team-btn {
+    background-color: var(--accent-gold);
+    color: var(--bg-primary);
+    border: none;
+    border-radius: 3px;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.create-team-btn:hover {
+    background-color: var(--primary-color);
+}
+
+/* ******** TEAM GROUP ******** */
+.team-group {
+    border: solid 2px #fff;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.team-group-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.team-group-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.team-group-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.team-color-btn {
+    background: none;
+    border: solid 1px var(--border-color);
+    color: var(--text-secondary);
+    border-radius: 3px;
+    padding: 3px 8px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.team-color-btn:hover {
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+}
+
+.team-delete-btn {
+    background: none;
+    border: solid 1px var(--accent-red);
+    color: var(--accent-red);
+    border-radius: 3px;
+    padding: 3px 8px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.team-delete-btn:hover {
+    background-color: var(--accent-red);
+    color: var(--text-primary);
+}
+
+.team-cards {
+    display: grid;
+    gap: 10px;
+}
+
+.team-slot-empty {
+    border: dashed 1px var(--border-color);
+    border-radius: 5px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--border-color);
+    font-size: 0.85rem;
+}
+
+/* ******** TEAM DROPDOWN ON CARD ******** */
+.card-team-select {
+    width: 100%;
+    margin-top: 6px;
+    padding: 4px 6px;
+    background-color: var(--bg-secondary);
+    border: solid 1px var(--border-color);
+    border-radius: 3px;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    font-family: "Ubuntu", sans-serif;
+    cursor: pointer;
+}
+
+.card-team-select:focus {
+    outline: none;
+    border-color: var(--accent-gold);
+}
+
+/* ******** CREATE TEAM DIALOG ******** */
+.create-team-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.create-team-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.create-team-form input {
+    padding: 8px 10px;
+    background-color: var(--bg-card);
+    border: solid 1px var(--border-color);
+    border-radius: 3px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.create-team-form input:focus {
+    outline: none;
+    border-color: var(--accent-gold);
+}
+
+/* ******** COLOR PICKER ******** */
+.color-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.color-option {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 5px;
+    border: solid 2px transparent;
+    cursor: pointer;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.color-option:hover {
+    border-color: #fff;
+}
+
+.color-option.selected {
+    border-color: #fff;
+}
+
+.section-subtitle {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 10px 0 5px 0;
+    grid-column: 1 / -1;
+    border-bottom: none;
+    padding: 0;
+}
+
 /* ******** POKEMON CARDS ******** */
 #pokemon-cards {
     display: grid;
